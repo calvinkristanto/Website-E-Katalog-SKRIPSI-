@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .navbar {
     background-color: #001f3f; /* biru navy */
     color: white;
@@ -23,6 +22,8 @@
     }
 
 }
+
+
 body {
    background-color: #483322;
 }
@@ -32,17 +33,6 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 30px;
-}
-.search-box{
-    width:50%;
-    padding: 12px 20px;
-    border: 2px solid #e0c0c1;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #fff6f6;
-    color: #070627;
-    font-family: "Inter", sans-serif;
-    
 }
 
 /* Container and Slider */
@@ -113,7 +103,7 @@ body {
     background: white;
 }
 
-/* Media Queries for Responsiveness */
+/* responsif */
 @media (max-width: 768px) {
     .button span {
         font-size: 1.5rem;
@@ -138,29 +128,10 @@ body {
     }
 }
 
-.back-home {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: bold;
-    color:#e0c0c1;
-    background:none;
-    font-family: "Inter", sans-serif;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px;
-    transition: background-color 0.3s;
-    text-decoration: none;
-}
 
-.back-home:hover {
-    background-color: #2D2424;
-}
 
 @media (max-width: 768px) {
-    .back-home {
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
+    
 }
 .judul2 h3{
     text-align: center;
@@ -241,70 +212,238 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
-}
-
-.fab-menu p{
-    font-family: "inter", serif;
-    font-style: normal;
-    
+    display: flex;
+    flex-direction: column-reverse; /* Membalikkan urutan elemen */
+    align-items: flex-end;
 }
 
 .fab-button {
     width: 60px;
     height: 60px;
-    background-color: #25D366;
+    background-color: #25d366;
     border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-bottom: 10px;
+
 }
 
-.fab-button img {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-}
-
-.fab-button:hover {
-    transform: scale(1.1);
+.fab-icon {
+    width: 30px;
+    height: 30px;
 }
 
 .fab-menu {
     display: none;
-    position: absolute;
-    bottom: 70px;
-    right: 10px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menufab {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .fab-item {
     display: flex;
     align-items: center;
+    background-color: white;
+    color: #333;
     text-decoration: none;
-    color: #020202;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .fab-item:hover {
-    background: rgba(37, 211, 102, 0.2);
+    background-color: #f0f0f0;
 }
 
 .fab-logo {
-    width: 30px;  /* Sesuaikan ukuran ikon */
-    height: 30px;
-    margin-right: 10px; /* Beri jarak antara ikon dan teks */
-}
-.fab-item:hover {
-    background: rgba(37, 211, 102, 0.2);
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
 }
 
+
+@media (max-width: 1024px) {
+    .fab-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .fab-button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .fab-item {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* ✅ Untuk HP (Lebar max 768px) */
+@media (max-width: 768px) {
+    .fab-container {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .fab-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .fab-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .fab-item {
+        font-size: 13px;
+        padding: 7px 10px;
+        border-radius: 40px;
+    }
+
+    .fab-logo {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* ✅ Untuk HP Kecil (Lebar max 480px) */
+@media (max-width: 480px) {
+    .fab-container {
+        bottom: 8px;
+        right: 8px;
+    }
+
+    .fab-button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .fab-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .fab-item {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .fab-logo {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.menufab p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.map-overlay {
+    display: none; /* Awalnya disembunyikan */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Pastikan di atas elemen lain */
+}
+
+.map-content {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.close-map {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* buat aturan searchbox */
+.search-sort-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    width: 70%;
+    padding: 12px 20px;
+    border: 2px solid #e0c0c1;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff6f6;
+    color: #070627;
+    font-family: "Inter", sans-serif;
+    margin: 5px;
+}
+
+.sort-container select {
+    padding: 12px 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 2px solid #e0c0c1;
+    background-color: #fff6f6;
+    color: #070627;
+    font-family: "Inter", sans-serif;
+}
+
+.sort-container {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-sort-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-sort-button .material-symbols-outlined {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Sembunyikan dropdown */
+#sort {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}

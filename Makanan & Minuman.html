@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sort" />
     <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>UMKM Makanan dan Minuman</title>
@@ -40,14 +41,31 @@
         </div>
     </section>
 
+    
     <section>
         <div class="judul2">
             <h3>Produk UMKM Makanan & Minuman</h3>
         </div>
-        <div class="search-container">
-            <input type="text" id="searchBox" class="search-box" placeholder="Cari produk UMKM...">
+    
+        <div class="search-sort-wrapper">
+            <div class="search-container">
+                <input type="text" id="searchBox" class="search-box" placeholder="Cari produk UMKM...">
+
+                <div class="sort-container">
+                    <label for="sort" class="custom-sort-button">
+                        <span class="material-symbols-outlined">sort</span>
+                    </label>
+                    <select id="sort">
+                        <option value="asc">A-Z</option>
+                        <option value="desc">Z-A</option>
+                    </select>
+            </div>
+
+            
         </div>
     </section>
+
+    
 
     <main>
 
@@ -256,7 +274,30 @@
         </div>
     </div>
 </body>
-    
+
+
+<script>
+    document.getElementById("sort").addEventListener("change", function () {
+        const sortBy = this.value;
+        const container = document.getElementById("product-list");
+        const items = Array.from(container.getElementsByClassName("item"));
+
+        items.sort((a, b) => {
+            const titleA = a.querySelector(".boxdes h1").textContent.toLowerCase();
+            const titleB = b.querySelector(".boxdes h1").textContent.toLowerCase();
+
+            if (sortBy === "asc") {
+                return titleA.localeCompare(titleB);
+            } else {
+                return titleB.localeCompare(titleA);
+            }
+        });
+
+        // Hapus semua item lalu tambahkan urutan baru
+        container.innerHTML = "";
+        items.forEach(item => container.appendChild(item));
+    });
+</script>
 <script>
     function setLastCategory(name) {
       sessionStorage.setItem("lastCategory", name);

@@ -4,8 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
 .navbar {
     background-color: #001f3f; /* biru navy */
     color: white;
@@ -24,6 +22,8 @@
     }
 
 }
+
+
 body {
    background-color: #483322;
 }
@@ -33,17 +33,6 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 30px;
-}
-.search-box{
-    width:50%;
-    padding: 12px 20px;
-    border: 2px solid #e0c0c1;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #fff6f6;
-    color: #070627;
-    font-family: "Inter", sans-serif;
-    
 }
 
 /* Container and Slider */
@@ -114,7 +103,7 @@ body {
     background: white;
 }
 
-/* Media Queries for Responsiveness */
+/* responsif */
 @media (max-width: 768px) {
     .button span {
         font-size: 1.5rem;
@@ -139,29 +128,10 @@ body {
     }
 }
 
-.back-home {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: bold;
-    color:#e0c0c1;
-    background:none;
-    font-family: "Inter", sans-serif;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px;
-    transition: background-color 0.3s;
-    text-decoration: none;
-}
 
-.back-home:hover {
-    background-color: #2D2424;
-}
 
 @media (max-width: 768px) {
-    .back-home {
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
+    
 }
 .judul2 h3{
     text-align: center;
@@ -221,6 +191,11 @@ body {
     color: #fff;
 }
 
+.boxdes a{
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Responsif untuk layar smartphone (max-width: 600px) */
 @media (max-width: 600px) {
     .box2 {
@@ -231,11 +206,6 @@ body {
     .boxdes {
         font-size: 6px; /* Ukuran font lebih kecil pada smartphone */
     }
-}
-
-.boxdes a{
-    text-decoration: none;
-    color: inherit;
 }
 
 .fab-container {
@@ -287,7 +257,6 @@ body {
     border-radius: 50px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    border: solid white 3px;
 }
 
 .fab-item:hover {
@@ -413,4 +382,68 @@ body {
     font-size: 18px;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+/* buat aturan searchbox */
+.search-sort-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    width: 70%;
+    padding: 12px 20px;
+    border: 2px solid #e0c0c1;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff6f6;
+    color: #070627;
+    font-family: "Inter", sans-serif;
+    margin: 5px;
+}
+
+.sort-container select {
+    padding: 12px 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 2px solid #e0c0c1;
+    background-color: #fff6f6;
+    color: #070627;
+    font-family: "Inter", sans-serif;
+}
+
+.sort-container {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-sort-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-sort-button .material-symbols-outlined {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Sembunyikan dropdown */
+#sort {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }

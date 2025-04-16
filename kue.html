@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sort" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>UMKM Kue</title>
 </head>
@@ -43,10 +44,22 @@
 
     <section>
         <div class="judul2">
-            <h3>Produk UMKM Kue</h3>
+            <h3>Produk UMKM Makanan & Minuman</h3>
         </div>
-        <div class="search-container">
-            <input type="text" id="searchBox" class="search-box" placeholder="Cari produk UMKM...">
+    
+        <div class="search-sort-wrapper">
+            <div class="search-container">
+                <input type="text" id="searchBox" class="search-box" placeholder="Cari produk UMKM...">
+
+                <div class="sort-container">
+                    <label for="sort" class="custom-sort-button">
+                        <span class="material-symbols-outlined">sort</span>
+                    </label>
+                    <select id="sort">
+                        <option value="asc">A-Z</option>
+                        <option value="desc">Z-A</option>
+                    </select>
+            </div>            
         </div>
     </section>
 
@@ -56,7 +69,7 @@
             <div class="item">
                 <div class="box2">
                     <a href="Ayummy Kuker.html">
-                        <img src="Foto/Kue/Ayummy Kuker/beranda.jpg" alt="Ayummy Kuker">
+                        <img src="Foto/Kue/Ayummy Kuker/beranda.jpg">
                     </a>
                 </div>
                 <div class="boxdes">
@@ -69,7 +82,7 @@
             <div class="item">
                 <div class="box2">
                     <a href="AIRA COOKIES.html">
-                        <img src="Foto/Kue/Aira Cookies/beranda.jpg" alt="Ayummy Kuker">
+                        <img src="Foto/Kue/Aira Cookies/beranda.jpg">
                     </a>
                 </div>
                 <div class="boxdes">
@@ -81,13 +94,26 @@
 
             <div class="item">
                 <div class="box2">
-                    <a href="AIRA COOKIES.html">
-                        <img src="Foto/Kue/Aira Cookies/beranda.jpg" alt="Ayummy Kuker">
+                    <a href="Jenny Baker.html">
+                        <img src="Foto/Kue/Jenny Baker/Donut Green Tea.jpg">
                     </a>
                 </div>
                 <div class="boxdes">
-                    <a href="AIRA COOKIES.html">
-                        <h1>Aira Cookies</h1>
+                    <a href="Jenny Baker.html">
+                        <h1>Jenny Baker</h1>
+                    </a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="box2">
+                    <a href="Donat Kentang Susu Del Luna.html">
+                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donut Glaze Blueberry.jpg">
+                    </a>
+                </div>
+                <div class="boxdes">
+                    <a href="Donat Kentang Susu Del Luna.html">
+                        <h1>Donat  Del Luna</h1>
                     </a>
                 </div>
             </div>
@@ -122,21 +148,25 @@
     </script>
     
     <script>
-        // Cek apakah datang dari index.html (atau belum disimpan sebelumnya)
-        if (!sessionStorage.getItem('fromIndex')) {
-          // Simpan flag agar tidak pushState berkali-kali
-          sessionStorage.setItem('fromIndex', 'true');
-      
-          // Tambahkan entry palsu ke history agar back pertama tetap ke index.html
-          history.pushState(null, null, location.href);
-        }
-      
-        // Deteksi back kedua dari kue.html → index.html
-        window.addEventListener('popstate', function () {
-          // Hapus flag
-          sessionStorage.removeItem('fromIndex');
-          // Redirect ke index.html saat user back dari kue.html
-          window.location.href = "index.html";
+        document.getElementById("sort").addEventListener("change", function () {
+            const sortBy = this.value;
+            const container = document.getElementById("product-list");
+            const items = Array.from(container.getElementsByClassName("item"));
+    
+            items.sort((a, b) => {
+                const titleA = a.querySelector(".boxdes h1").textContent.toLowerCase();
+                const titleB = b.querySelector(".boxdes h1").textContent.toLowerCase();
+    
+                if (sortBy === "asc") {
+                    return titleA.localeCompare(titleB);
+                } else {
+                    return titleB.localeCompare(titleA);
+                }
+            });
+    
+            // Hapus semua item lalu tambahkan urutan baru
+            container.innerHTML = "";
+            items.forEach(item => container.appendChild(item));
         });
     </script>
       

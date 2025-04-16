@@ -6,10 +6,10 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1a4731, #2e8b57);
     min-height: 100vh;
     padding: 16px;
     color: #333;
+    background-image: url(Foto/bg.jpg);
 }
 
 .back-link {
@@ -258,3 +258,53 @@ body {
     .fab-logo { width: 20px; height: 20px; }
     .description { font-size: 0.95rem; }
 }
+
+.page-header {
+    background-color: #ea5500;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 16px;           /* Lebih ramping */
+    width: 100%;
+    max-width: 720px;             /* Sedikit lebih ramping */
+    margin: 24px auto 16px;       /* Jarak atas dan bawah yang nyaman */
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.page-header h1 {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width: 600px) {
+    .page-header h1 {
+        font-size: 25px;
+
+    }
+
+    .page-header{
+        padding: 10px 6px;
+        max-width: 300px;
+    }
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
