@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nasi kotak.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=NamaFont:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sort" />
+    <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>UMKM Nasi Kotak</title>
+</head>
+
+<header class="navbar">
+    <h1>Bandungrejosari</h1>
+</header>
+<body>
+ 
+    <section class="container">
+        <div class="slider-wrapper" id="slider">
+            <img src="Foto/Nasi Kotak/UMKM.png" alt="Nasi Bebek">
+            <img src="Foto/Nasi Kotak/UMKM 2.png" alt="Nasi Bento">
+            <img src="Foto/Nasi Kotak/UMKM 3.png" alt="Nasi Campur">
+        </div>
+
+        <div class="button">
+            <span class="prev" onclick="prevSlide()">&#10094;</span>
+            <span class="next" onclick="nextSlide()">&#10095;</span>
+        </div>
+
+        <div class="slider-nav">
+            <span onclick="goToSlide(0)"></span>
+            <span onclick="goToSlide(1)"></span>
+            <span onclick="goToSlide(2)"></span>
+        </div>
+    </section>
+
+    <section>
+        <div class="judul2">
+            <h3>Produk UMKM Makanan & Minuman</h3>
+        </div>
+    
+        <div class="search-sort-wrapper">
+            <div class="search-container">
+                <input type="text" id="searchBox" class="search-box" placeholder="Cari produk UMKM...">
+
+                <div class="sort-container">
+                    <label for="sort" class="custom-sort-button">
+                        <span class="material-symbols-outlined">sort</span>
+                    </label>
+                   <select id="sort">
+                        <option value="asc">Nama A-Z</option>
+                        <option value="desc">Nama Z-A</option>
+                        <option value="harga-asc">Harga Terendah</option>
+                        <option value="harga-desc">Harga Tertinggi</option>
+                    </select>
+
+            </div>
+        </div>
+    </section>
+
+   <main>
+  <div class="boxnasikotak" id="product-list">
+
+    <div class="item">
+      <div class="box2">
+        <a href="NK Mamanda.html"><img src="Foto/Nasi Kotak/Nasi bebek.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="NK Mamanda.html">
+          <h1>Nasi Kotak Mamanda</h1>
+          <p class="harga">Harga mulai dari Rp25.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="NK Roos Kitchen.html"><img src="Foto/Nasi Kotak/Roos Kitchen/Beranda.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="NK Roos Kitchen.html">
+          <h1>Nasi Kotak Roos Kitchen</h1>
+          <p class="harga">Harga mulai dari Rp6.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Kedai Cemil Elmindo.html"><img src="Foto/Nasi Kotak/Kedai Cemil Elmindo/Beranda.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="Kedai Cemil Elmindo.html">
+          <h1>Kedai Cemil Elmindo</h1>
+          <p class="harga">Harga mulai dari Rp3.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Catering Nien & Bakery.html"><img src="Foto/Nasi Kotak/Catering Nien and Bakery/Beranda.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="Catering Nien & Bakery.html">
+          <h1>Catering Nien's & Bakery</h1>
+          <p class="harga">Harga mulai dari Rp20.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Nia Catering.html"><img src="Foto/Nasi Kotak/Nia Catering/2.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="Nia Catering.html">
+          <h1>Nia Catering</h1>
+          <p class="harga">Harga mulai dari Rp20.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="NK Hermawan.html"><img src="Foto/Nasi Kotak/Nasi Kotak Hermawan/1.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="NK Hermawan.html">
+          <h1>Nasi Kotak Hermawan</h1>
+          <p class="harga">Harga mulai dari Rp25.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Endang Catering.html"><img src="Foto/Nasi Kotak/Endang Catering/1.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="Endang Catering.html">
+          <h1>Endang Catering</h1>
+          <p class="harga">Harga mulai dari Rp25.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="bento katarina.html"><img src="Foto/Nasi Kotak/Nasi Bento Katarina/1.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="bento katarina.html">
+          <h1>Bento Katarina</h1>
+          <p class="harga">Harga mulai dari Rp35.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="NK Santi.html"><img src="Foto/Nasi Kotak/Nasi Kotak Santi/1.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="NK Santi.html">
+          <h1>Nasi Kotak Santi</h1>
+          <p class="harga">Harga mulai dari Rp15.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Nasi Kotak I Gusti.html"><img src="Foto/Nasi Kotak/Nasi Kotak Gusti/4.jpg " alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="Nasi Kotak I Gusti.html">
+          <h1>Nasi Kotak I Gusti</h1>
+          <p class="harga">Harga mulai dari Rp15.000</p>
+        </a>
+      </div>
+    </div>
+      <div class="item">
+      <div class="box2">
+        <a href="Kedai Amira.html"><img src="Foto/Nasi Kotak/Kedai Amira/1.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="Kedai Amira.html">
+          <h1>Kedai Amira</h1>
+          <p class="harga">Harga mulai dari Rp15.000</p>
+        </a>
+      </div>
+    </div>
+      <div class="item">
+      <div class="box2">
+        <a href="Catering Nasi Bakar Hartono.html"><img src="Foto/Nasi Kotak/Nasi Bakar Hartono/1.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="Catering Nasi Bakar Hartono.html">
+          <h1>Nasi Bakar Hartono</h1>
+          <p class="harga">Harga mulai dari Rp24.000</p>
+        </a>
+      </div>
+    </div>
+      <div class="item">
+      <div class="box2">
+        <a href="NK Bu Kartika.html"><img src="Foto/Nasi Kotak/Nasi Kuning Spesial Bu Kartika/2.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="NK Bu Kartika.html">
+          <h1>Nasi Kuning Bu Kartika</h1>
+          <p class="harga">Harga mulai dari Rp24.000</p>
+        </a>
+      </div>
+    </div>
+      <div class="item">
+      <div class="box2">
+        <a href="Katering Bu Kris.html"><img src="Foto/Nasi Kotak/Katering Bu Kris/4.jpg" alt=""></a>
+      </div>
+      <div class="boxdes">
+        <a href="Katering Bu Kris.html">
+          <h1>Katering Bu Kris</h1>
+          <p class="harga">Harga mulai dari Rp35.000</p>
+        </a>
+      </div>
+    </div>
+    
+
+  </div>
+</main>
+
+
+    
+    <div class="fab-container">
+        <div class="fab-menu" id="fabMenu">
+            <div class="menufab">
+                <a href="https://wa.me/6281230110217" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 1 - Bu Emiliah</p>
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6281252548695" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 2 - Bu Rika</p> 
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6282331257449" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 3 - Bu Indrayani</p>
+                </a>
+            </div>
+            
+
+            <div class="menufab">
+                <button class="fab-item" id="openMap">
+                    <img src="Foto/icon/maps.png" alt="Map" class="fab-logo">
+                    <p>Map</p>
+                </button>
+            </div>
+            
+            <!-- Modal untuk Google Maps -->
+            <div id="mapContainer" class="map-overlay">
+                <div class="map-content">
+                    <iframe 
+                        id="mapFrame"
+                        src=""
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <button class="close-map" id="closeMap">✖</button>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="fab-button" onclick="toggleMenu()">
+            <img src="Foto/icon/whatsapp.png" alt="WhatsApp" class="fab-icon">
+        </div>
+    </div>
+    
+   <script>
+document.getElementById("sort").addEventListener("change", function () {
+    const sortBy = this.value;
+    const container = document.getElementById("product-list");
+    const items = Array.from(container.getElementsByClassName("item"));
+
+    items.sort((a, b) => {
+        const titleA = a.querySelector(".boxdes h1").textContent.toLowerCase();
+        const titleB = b.querySelector(".boxdes h1").textContent.toLowerCase();
+
+        const hargaTextA = a.querySelector(".harga").textContent.replace(/[^\d]/g, "");
+        const hargaTextB = b.querySelector(".harga").textContent.replace(/[^\d]/g, "");
+        const hargaA = parseInt(hargaTextA);
+        const hargaB = parseInt(hargaTextB);
+
+        switch (sortBy) {
+            case "asc":
+                return titleA.localeCompare(titleB);
+            case "desc":
+                return titleB.localeCompare(titleA);
+            case "harga-asc":
+                return hargaA - hargaB;
+            case "harga-desc":
+                return hargaB - hargaA;
+            default:
+                return 0;
+        }
+    });
+
+    container.innerHTML = "";
+    items.forEach(item => container.appendChild(item));
+});
+</script>
+
+    
+    
+    
+    
+</body>
+
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("fabMenu");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    }
+</script>
+<script src="fabmap.js"></script>
+<script src="slidenasikotak.js"></script>
+<script src="search.js"></script>

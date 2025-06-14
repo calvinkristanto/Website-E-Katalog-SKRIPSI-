@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Makanan & Minuman.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=NamaFont:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sort" />
+    <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>UMKM Makanan dan Minuman</title>
+</head>
+<header class="navbar">
+    <h1>Bandungrejosari</h1>
+</header>
+
+<body>
+    <section class="container">
+        <div class="slider-wrapper" id="slider">
+            <img src="Foto/Makanan & Minuman/1.jpg" alt="Nasi Bebek">
+            <img src="Foto/Makanan & Minuman/2.jpg" alt="Nasi Bento">
+            <img src="Foto/Nasi Kotak/UMKM 3.png" alt="Nasi Campur">
+        </div>
+
+        <div class="button">
+            <span class="prev" onclick="prevSlide()">&#10094;</span>
+            <span class="next" onclick="nextSlide()">&#10095;</span>
+        </div>
+
+        <div class="slider-nav">
+            <span onclick="goToSlide(0)"></span>
+            <span onclick="goToSlide(1)"></span>
+            <span onclick="goToSlide(2)"></span>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="judul2">
+            <h3>Produk UMKM Makanan & Minuman</h3>
+        </div>
+    
+        <div class="search-sort-wrapper">
+            <div class="search-container">
+                <input type="text" id="searchBox" class="search-box" placeholder="Cari produk UMKM...">
+
+                <div class="sort-container">
+                    <label for="sort" class="custom-sort-button">
+                        <span class="material-symbols-outlined">sort</span>
+                    </label>
+                   <select id="sort">
+                        <option value="asc">Nama A-Z</option>
+                        <option value="desc">Nama Z-A</option>
+                        <option value="harga-asc">Harga Terendah</option>
+                        <option value="harga-desc">Harga Tertinggi</option>
+                    </select>
+
+            </div>
+
+            
+        </div>
+    </section>
+
+    
+
+      <main>
+  <div class="boxnasikotak" id="product-list">
+
+    <div class="item">
+      <div class="box2">
+        <a href="seblakd34.html" onclick="setLastCategory('Makanan & Minuman.html')">
+          <img src="Foto/Makanan & Minuman/Seblak Malang D34/Seblak beranda.jpg" alt="Seblak Malang D34">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="seblakd34.html" onclick="setLastCategory('Makanan & Minuman.html')">
+          <h1>Seblak Malang D34</h1>
+          <p class="harga">Harga mulai dari Rp10.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="mendoanagus.html" onclick="setLastCategory('Makanan & Minuman.html')">
+          <img src="Foto/Makanan & Minuman/Tempe Medoan Sam Agus/1.jpg" alt="Tempe Mendoan Sam Suga">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="mendoanagus.html" onclick="setLastCategory('Makanan & Minuman.html')">
+          <h1>Tempe Mendoan <br>Sam Suga</h1>
+          <p class="harga">Harga mulai dari Rp5.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="buburayamgandrung.html">
+          <img src="Foto/Makanan & Minuman/Bubur Ayam Gandrung/1.jpg" alt="Bubur Ayam Gandrung">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="buburayamgandrung.html">
+          <h1>Bubur Ayam Gandrung</h1>
+          <p class="harga">Harga mulai dari Rp12.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Bandeng Presto Bu Titik.html">
+          <img src="Foto/Makanan & Minuman/Bandeng Presto Bu Titik/Beranda.jpg" alt="Bandeng Presto Bu Titik">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Bandeng Presto Bu Titik.html">
+          <h1>Bandeng Presto Bu Titik</h1>
+          <p class="harga">Harga mulai dari Rp25.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Bakso 37.html">
+          <img src="Foto/Makanan & Minuman/Bakso 37/Beranda.jpg" alt="Bakso 37">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Bakso 37.html">
+          <h1>Bakso 37</h1>
+          <p class="harga">Harga mulai dari Rp15.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Bakmi Keriting.html">
+          <img src="Foto/Makanan & Minuman/Bakmie Keriting 97/profil.jpeg" alt="Bakmie Keriting 97">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Bakmi Keriting.html">
+          <h1>Bakmie Keriting 97</h1>
+          <p class="harga">Harga mulai dari Rp14.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Mie Kepo.html">
+          <img src="Foto/Makanan & Minuman/Mie Kepo/1.jpg" alt="Mie Kepoo">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Mie Kepo.html">
+          <h1>Mie Kepoo</h1>
+          <p class="harga">Harga mulai dari Rp13.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Dapur Rumah Chilla.html">
+          <img src="Foto/Makanan & Minuman/Dapur Rumah Chillia/1.jpg" alt="Dapur Rumah Chilla">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Dapur Rumah Chilla.html">
+          <h1>Dapur Rumah Chilla</h1>
+          <p class="harga">Harga mulai dari Rp10.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Kedai Bu Nila.html">
+          <img src="Foto/Makanan & Minuman/Kedai Bu Nila/1.jpg" alt="Kedai Bu Nila">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Kedai Bu Nila.html">
+          <h1>Kedai Bu Nila</h1>
+          <p class="harga">Harga mulai dari Rp8.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Nasi Goreng Jendral.html">
+          <img src="Foto/Makanan & Minuman/Nasi Goreng Jendral/1.jpg" alt="Nasi Goreng Jendral">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Nasi Goreng Jendral.html">
+          <h1>Nasi Goreng Jendral</h1>
+          <p class="harga">Harga mulai dari Rp18.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Koto Minang Raya.html">
+          <img src="Foto/Makanan & Minuman/Padang Minang Raya/Profil.jpg" alt="Padang Minang Raya">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Koto Minang Raya.html">
+          <h1>Padang Minang Raya</h1>
+          <p class="harga">Harga mulai dari Rp20.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Dapur Yuli Hajar.html">
+          <img src="Foto/Makanan & Minuman/Dapur Yuli Hajar/2.jpg" alt="Dapur Yuli Hajar">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Dapur Yuli Hajar.html">
+          <h1>Dapur Yuli Hajar</h1>
+          <p class="harga">Harga mulai dari Rp10.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="siomay batagor Kebonsari.html">
+          <img src="Foto/Makanan & Minuman/Siomay dan Batagor Kebonsari/1.jpg" alt="Siomay Batagor Kebonsari">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="siomay batagor Kebonsari.html">
+          <h1>Siomay Batagor Kebonsari</h1>
+          <p class="harga">Harga mulai dari Rp7.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Pitu Food.html">
+          <img src="Foto/Makanan & Minuman/Pitu Food & Drink/Banner.jpg" alt="Pitu Food & Drink">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Pitu Food.html">
+          <h1>Pitu Food & Drink</h1>
+          <p class="harga">Harga mulai dari Rp12.000</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+
+    <div class="fab-container">
+        <div class="fab-menu" id="fabMenu">
+            <div class="menufab">
+                <a href="https://wa.me/6281230110217" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 1 - Bu Emiliah</p>
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6281252548695" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 2 - Bu Rika</p> 
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6282331257449" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 3 - Bu Indrayani</p>
+                </a>
+            </div>
+            
+
+            <div class="menufab">
+                <button class="fab-item" id="openMap">
+                    <img src="Foto/icon/maps.png" alt="Map" class="fab-logo">
+                    <p>Map</p>
+                </button>
+            </div>
+            
+            <!-- Modal untuk Google Maps -->
+            <div id="mapContainer" class="map-overlay">
+                <div class="map-content">
+                    <iframe 
+                        id="mapFrame"
+                        src=""
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <button class="close-map" id="closeMap">✖</button>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="fab-button" onclick="toggleMenu()">
+            <img src="Foto/icon/whatsapp.png" alt="WhatsApp" class="fab-icon">
+        </div>
+    </div>
+</body>
+
+
+<script>
+document.getElementById("sort").addEventListener("change", function () {
+    const sortBy = this.value;
+    const container = document.getElementById("product-list");
+    const items = Array.from(container.getElementsByClassName("item"));
+
+    items.sort((a, b) => {
+        const titleA = a.querySelector(".boxdes h1").textContent.toLowerCase();
+        const titleB = b.querySelector(".boxdes h1").textContent.toLowerCase();
+
+        const hargaTextA = a.querySelector(".harga").textContent.replace(/[^\d]/g, "");
+        const hargaTextB = b.querySelector(".harga").textContent.replace(/[^\d]/g, "");
+        const hargaA = parseInt(hargaTextA);
+        const hargaB = parseInt(hargaTextB);
+
+        switch (sortBy) {
+            case "asc":
+                return titleA.localeCompare(titleB);
+            case "desc":
+                return titleB.localeCompare(titleA);
+            case "harga-asc":
+                return hargaA - hargaB;
+            case "harga-desc":
+                return hargaB - hargaA;
+            default:
+                return 0;
+        }
+    });
+
+    container.innerHTML = "";
+    items.forEach(item => container.appendChild(item));
+});
+</script>
+
+
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("fabMenu");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    }
+</script>
+<script src="fabmap.js"></script>
+<script src="slidenasikotak.js"></script>
+<script src="search.js"></script>

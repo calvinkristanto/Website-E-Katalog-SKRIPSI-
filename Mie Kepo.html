@@ -1,85 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mie Kepoo</title>
-    <link rel="stylesheet" href="allformakanan.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mie Kepoo</title>
+  <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="allformakanan.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
 <body>
-    <div class="content-container">
-    
-        
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide">
-                    <figure>
-                        <img src="Foto/Makanan & Minuman/Mie Kepo/1.jpg" alt="Bakmi Keriting">
-                        <figcaption>Mie Kepo Original</figcaption>
-                    </figure>
-                </div>
-                <div class="slide">
-                    <figure>
-                        <img src="Foto/Makanan & Minuman/Mie Kepo/2.jpg" alt="Charsiu">
-                        <figcaption>Pangsit Mie Kepo Pedas Lvl 1,2,3</figcaption>
-                    </figure>
-                </div>
-                <div class="slide">
-                    <figure>
-                        <img src="Foto/Makanan & Minuman/Mie Kepo/3.jpg" alt="Bakmi Bulat">
-                        <figcaption>Siomay Goreng</figcaption>
-                    </figure>
-                </div>
-                <div class="slide">
-                    <figure>
-                        <img src="Foto/Makanan & Minuman/Mie Kepo/4.jpg" alt="Bakmi Campur">
-                        <figcaption>Bubur Ayam</figcaption>
-                    </figure>
-                </div>
-                <div class="slide">
-                  <figure>
-                      <img src="Foto/Makanan & Minuman/Mie Kepo/5.jpg" alt="Bakmi Campur">
-                      <figcaption>Bihun</figcaption>
-                  </figure>
-              </div>
-              <div class="slide">
-                <figure>
-                    <img src="Foto/Makanan & Minuman/Mie Kepo/6.jpg" alt="Bakmi Campur">
-                    <figcaption>Boba</figcaption>
-                </figure>
-            </div>
-            </div>
-            
-            <div class="slider-buttons">
-                <button class="slider-btn prev">❮</button>
-                <button class="slider-btn next">❯</button>
-            </div>
+  <main class="content-container">
+    <!-- SLIDER -->
+    <!-- SLIDER -->
+<section class="slider-container" aria-label="Galeri Mie Kepoo">
+  <div class="slider">
+    <div class="slide">
+      <figure>
+        <img src="Foto/Makanan & Minuman/Mie Kepo/1.jpg" alt="Mie Kepo Original">
+        <figcaption>
+          Mie Kepo Original<br><strong>IDR 12.000</strong>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="slide">
+      <figure>
+        <img src="Foto/Makanan & Minuman/Mie Kepo/2.jpg" alt="Mie Kepo Pedas">
+        <figcaption>
+          Pangsit Mie Kepo Pedas Lvl 1,2,3<br><strong>IDR 14.000</strong>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="slide">
+      <figure>
+        <img src="Foto/Makanan & Minuman/Mie Kepo/3.jpg" alt="Siomay">
+        <figcaption>
+          Siomay Goreng<br><strong>IDR 8.000</strong>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="slide">
+      <figure>
+        <img src="Foto/Makanan & Minuman/Mie Kepo/4.jpg" alt="Bubur Ayam">
+        <figcaption>
+          Bubur Ayam<br><strong>IDR 10.000</strong>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="slide">
+      <figure>
+        <img src="Foto/Makanan & Minuman/Mie Kepo/5.jpg" alt="Bihun">
+        <figcaption>
+          Bihun<br><strong>IDR 11.000</strong>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="slide">
+      <figure>
+        <img src="Foto/Makanan & Minuman/Mie Kepo/6.jpg" alt="Boba">
+        <figcaption>
+          Boba<br><strong>IDR 7.000</strong>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="slider-buttons">
+    <button type="button" class="slider-btn prev" aria-label="Slide sebelumnya">❮</button>
+    <button type="button" class="slider-btn next" aria-label="Slide selanjutnya">❯</button>
+  </div>
+</section>
+
+
+          <!-- INFO TOKO -->
+  <section class="info-box" aria-label="Informasi Warung">
+    <!-- Jam Operasional -->
+    <div class="hours">
+      <div class="icons">
+        <span class="material-symbols-outlined">calendar_today</span>
+        <p>Hari: Senin - Jumat</p>
+      </div>
+      <div class="icons">
+        <span class="material-symbols-outlined">schedule</span>
+        <p>Jam: 06.00 - 20.30</p>
+      </div>
+    </div>
+
+    <!-- Detail Produk -->
+    <div class="description">
+      <section class="product-details" aria-label="Detail Produk">
+        <!-- Tab Navigasi -->
+        <div class="tabs">
+          <button class="tab-button active" data-tab="description">Deskripsi</button>
+          <button class="tab-button" data-tab="review">Ulasan</button>
+          <button class="tab-button" data-tab="shipping">Pengiriman</button>
         </div>
 
-        <div class="info-box">
-            <div class="hours">
-                <span class="icons">
-                    <span class="material-symbols-outlined">calendar_today</span>
-                    <p>Hari:Senin-Jumat</p>
-                </span>
-                <span class="icons">
-                    <span class="material-symbols-outlined">schedule</span>
-                    <p>Jam:06.00 - 20.30</p>
-                </span>
+        <!-- Konten Tab: Deskripsi -->
+        <div class="tab-content" id="description">
+          Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. 
+          Cras felis nunc commodo eu convallis vitae interdum non nisl. Maecenas ac est sit amet augue 
+          pharetra convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna 
+          congue. Damus id ullamcorper neque. Sed vitae mi a mi pretium aliquet ac sed elit. Pellentesque 
+          nulla eros accumsan quis justo at tincidunt lobortis denimes loremous. Suspendisse vestibulum 
+          lectus in lectus volutpat, ut dapibus purus pulvinar. Vestibulum sit amet auctor ipsum.
+        </div>
+
+        <!-- Konten Tab: Ulasan -->
+        <div class="tab-content" id="review" style="display: none;">
+          <!-- Review Dummy -->
+          <div class="review-item">
+            <p><strong>Anna</strong> ⭐⭐⭐⭐☆</p>
+            <p>Rasanya enak, porsinya pas. Akan beli lagi!</p>
+          </div>
+          <div class="review-item">
+            <p><strong>Budi</strong> ⭐⭐⭐⭐⭐</p>
+            <p>Pelayanan cepat, dan makanannya fresh banget. Mantap!</p>
+          </div>
+          <div class="review-item">
+            <p><strong>Citra</strong> ⭐⭐⭐☆☆</p>
+            <p>Lumayan, tapi menurut saya agak kurang bumbu.</p>
+          </div>
+
+          <!-- Form Tambah Ulasan -->
+          <div id="user-reviews"></div>
+          <div class="add-review">
+            <h4>Tambah Ulasan Anda</h4>
+            <form id="review-form">
+              <label for="review-name">Nama:</label><br />
+              <input type="text" id="review-name" placeholder="Nama Anda" required /><br />
+
+              <label for="review-rating">Rating:</label><br />
+              <select id="review-rating" required>
+                <option value="">Pilih Rating</option>
+                <option value="5">⭐⭐⭐⭐⭐ - Sangat puas</option>
+                <option value="4">⭐⭐⭐⭐ - Puas</option>
+                <option value="3">⭐⭐⭐ - Cukup</option>
+                <option value="2">⭐⭐ - Kurang</option>
+                <option value="1">⭐ - Tidak suka</option>
+              </select><br />
+
+              <label for="review-message">Ulasan:</label><br />
+              <textarea id="review-message" placeholder="Tulis ulasan Anda..." required></textarea><br />
+
+              <button type="submit">Kirim</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Konten Tab: Pengiriman -->
+        <div class="tab-content" id="shipping" style="display: none;">
+          Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. 
+          Cras felis nunc commodo eu convallis vitae interdum non nisl. Maecenas ac est sit amet augue 
+          pharetra convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna 
+          congue. Damus id ullamcorper neque. Sed vitae mi a mi pretium aliquet ac sed elit. Pellentesque 
+          nulla eros accumsan quis justo at tincidunt lobortis denimes loremous. Suspendisse vestibulum 
+          lectus in lectus volutpat, ut dapibus purus pulvinar. Vestibulum sit amet auctor ipsum.
+        </div>
+      </section>
+    </div>
+  </section>
+
+    <!-- TOMBOL PESAN -->
+    <p id="openOrderForm" style="
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 2 rem;
+        color: white;
+        background-color: orange;
+        display: inline-block;
+        padding: 26px 46px;
+        border-radius: 6px;
+        margin: 20px auto;
+        transition: background-color 0.3s;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    ">Pesan</p>
+
+    <!-- POPUP FORM PEMESANAN -->
+<div id="orderPopup" class="popup-overlay" style="display: none;" role="dialog" aria-modal="true">
+        <div class="popup-content">
+            <h3>Pesan Sekarang - Multiple Item</h3>
+            
+            <button class="add-item-btn" onclick="addNewItem()">+ Tambah Item Baru</button>
+            
+            <div id="itemsContainer">
+                <!-- Items will be added here dynamically -->
             </div>
 
-            <p class="description">
-                Nikmati sensasi unik dari Mie Kepo, mie kenyal dengan cita rasa khas yang dipadukan dengan topping spesial seperti ayam suwir, pangsit goreng renyah, dan sayuran segar. Lengkap dengan semangkuk bubur ayam gurih bertabur cakwe, daun bawang, bawang goreng, dan suwiran ayam lembut, cocok banget buat kamu yang doyan kenyang maksimal!
-                Sebagai pelengkap, segelas boba milk tea dingin siap menyegarkan harimu dengan sensasi chewy boba dan rasa manis yang pas.
-            </p>
+            <div class="order-summary">
+                <h4>Ringkasan Pesanan</h4>
+                <div id="summaryContent">
+                    <div class="summary-item">
+                        <span>Belum ada item</span>
+                        <span>IDR 0</span>
+                    </div>
+                </div>
+                <div class="summary-total">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Total Keseluruhan:</span>
+                        <span id="grandTotal">IDR 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-buttons">
+                <button type="button" onclick="checkout()">Pesan Sekarang</button>
+                <button type="button" onclick="closeOrderForm()">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Popup -->
+    <div id="confirmationPopup" class="popup-overlay" style="display: none;" role="dialog" aria-modal="true">
+        <div class="confirmation-popup">
+            <h3>Konfirmasi Pesanan</h3>
+            <div id="confirmationContent"></div>
+            <div class="popup-buttons">
+                <button type="button" onclick="confirmOrder()">Ya, Pesan</button>
+                <button type="button" onclick="closeConfirmation()">Batal</button>
+            </div>
         </div>
     </div>
 
 
+    <!-- WHATSAPP FLOATING BUTTON -->
     <div class="fab-container">
         <div class="fab-menu" id="fabMenu">
             <div class="menufab">
@@ -129,22 +275,253 @@
             <img src="Foto/icon/whatsapp.png" alt="WhatsApp" class="fab-icon">
         </div>
     </div>
-    
-</body>
-</html>
 
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("fabMenu");
-        if (menu.style.display === "flex") {
-            menu.style.display = "none";
-        } else {
-            menu.style.display = "flex";
-        }
+    
+    
+    <!-- KONFIRMASI PESANAN -->
+    <div id="popup" class="popup-overlay" style="display:none;" role="dialog" aria-modal="true">
+      <div class="popup-content">
+        <h3>Konfirmasi Pesanan</h3>
+        <p id="popupText"></p>
+        <div class="popup-buttons">
+          <button type="button" onclick="confirmOrder()">Pesan</button>
+          <button type="button" onclick="closePopup()">Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <noscript><p style="color:red;">Mohon aktifkan JavaScript untuk menggunakan fitur pemesanan.</p></noscript>
+  </main>
+
+  <!-- SCRIPT -->
+  <script src="fabmap.js"></script>
+  <script>
+  const hargaMenu = {
+    "Mie Kepo Original": 12000,
+    "Pangsit Pedas": 14000,
+    "Siomay Goreng": 8000,
+    "Bubur Ayam": 10000,
+    "Bihun": 11000,
+    "Boba": 7000
+  };
+
+  let itemCounter = 0;
+  let orderItems = [];
+
+  function addNewItem() {
+    itemCounter++;
+    const itemId = `item-${itemCounter}`;
+
+    const itemHtml = `
+      <div class="item-row" id="${itemId}">
+        <button class="remove-item" onclick="removeItem('${itemId}')" title="Hapus item">×</button>
+        
+        <div class="form-group">
+          <label>Pilih Menu:</label>
+          <select onchange="updateItemPrice('${itemId}')">
+            <option value="Mie Kepo Original">Mie Kepo Original - IDR 12,000</option>
+            <option value="Pangsit Pedas">Pangsit Pedas - IDR 14,000</option>
+            <option value="Siomay Goreng">Siomay Goreng - IDR 8,000</option>
+            <option value="Bubur Ayam">Bubur Ayam - IDR 10,000</option>
+            <option value="Bihun">Bihun - IDR 11,000</option>
+            <option value="Boba">Boba - IDR 7,000</option>
+          </select>
+        </div>
+
+        <div class="item-controls">
+          <div class="form-group" style="flex: 1;">
+            <label>Harga Satuan:</label>
+            <input type="text" class="price-input" value="IDR 12,000" readonly />
+          </div>
+          
+          <div class="form-group" style="flex: 1;">
+            <label>Jumlah:</label>
+            <div class="quantity-controls">
+              <button class="quantity-btn" onclick="changeQuantity('${itemId}', -1)">-</button>
+              <input type="number" class="quantity-input" value="1" min="1" onchange="updateItemTotal('${itemId}')">
+              <button class="quantity-btn" onclick="changeQuantity('${itemId}', 1)">+</button>
+            </div>
+          </div>
+          
+          <div class="form-group" style="flex: 1;">
+            <label>Subtotal:</label>
+            <input type="text" class="total-input" value="IDR 12,000" readonly />
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('itemsContainer').insertAdjacentHTML('beforeend', itemHtml);
+    updateOrderSummary();
+  }
+
+  function removeItem(itemId) {
+    const itemElement = document.getElementById(itemId);
+    if (itemElement) {
+      itemElement.remove();
+      updateOrderSummary();
     }
+  }
+
+  function updateItemPrice(itemId) {
+    const itemElement = document.getElementById(itemId);
+    const select = itemElement.querySelector('select');
+    const priceInput = itemElement.querySelector('.price-input');
+
+    const selectedMenu = select.value;
+    const price = hargaMenu[selectedMenu];
+
+    priceInput.value = `IDR ${price.toLocaleString('id-ID')}`;
+    updateItemTotal(itemId);
+  }
+
+  function changeQuantity(itemId, change) {
+    const itemElement = document.getElementById(itemId);
+    const quantityInput = itemElement.querySelector('.quantity-input');
+
+    let currentQuantity = parseInt(quantityInput.value) || 1;
+    let newQuantity = currentQuantity + change;
+    if (newQuantity < 1) newQuantity = 1;
+
+    quantityInput.value = newQuantity;
+    updateItemTotal(itemId);
+  }
+
+  function updateItemTotal(itemId) {
+    const itemElement = document.getElementById(itemId);
+    const select = itemElement.querySelector('select');
+    const quantityInput = itemElement.querySelector('.quantity-input');
+    const totalInput = itemElement.querySelector('.total-input');
+
+    const selectedMenu = select.value;
+    const price = hargaMenu[selectedMenu];
+    const quantity = parseInt(quantityInput.value) || 1;
+    const total = price * quantity;
+
+    totalInput.value = `IDR ${total.toLocaleString('id-ID')}`;
+    updateOrderSummary();
+  }
+
+  function updateOrderSummary() {
+    const items = document.querySelectorAll('.item-row');
+    const summaryContent = document.getElementById('summaryContent');
+    const grandTotalElement = document.getElementById('grandTotal');
+
+    let grandTotal = 0;
+    let summaryHtml = '';
+
+    if (items.length === 0) {
+      summaryHtml = '<div class="summary-item"><span>Belum ada item</span><span>IDR 0</span></div>';
+    } else {
+      items.forEach(item => {
+        const select = item.querySelector('select');
+        const quantityInput = item.querySelector('.quantity-input');
+        const selectedMenu = select.value;
+        const quantity = parseInt(quantityInput.value) || 1;
+        const price = hargaMenu[selectedMenu];
+        const subtotal = price * quantity;
+
+        grandTotal += subtotal;
+        summaryHtml += `
+          <div class="summary-item">
+            <span>${selectedMenu} x${quantity}</span>
+            <span>IDR ${subtotal.toLocaleString('id-ID')}</span>
+          </div>
+        `;
+      });
+    }
+
+    summaryContent.innerHTML = summaryHtml;
+    grandTotalElement.textContent = `IDR ${grandTotal.toLocaleString('id-ID')}`;
+  }
+
+  function checkout() {
+    const items = document.querySelectorAll('.item-row');
+
+    if (items.length === 0) {
+      alert('Tambahkan minimal 1 item untuk melanjutkan pemesanan.');
+      return;
+    }
+
+    orderItems = [];
+    let grandTotal = 0;
+
+    items.forEach(item => {
+      const select = item.querySelector('select');
+      const quantityInput = item.querySelector('.quantity-input');
+      const selectedMenu = select.value;
+      const quantity = parseInt(quantityInput.value) || 1;
+      const price = hargaMenu[selectedMenu];
+      const subtotal = price * quantity;
+
+      orderItems.push({
+        menu: selectedMenu,
+        quantity: quantity,
+        price: price,
+        subtotal: subtotal
+      });
+
+      grandTotal += subtotal;
+    });
+
+    let confirmationHtml = '<div class="order-details"><h4>Detail Pesanan:</h4>';
+    orderItems.forEach(item => {
+      confirmationHtml += `
+        <p><strong>${item.menu}</strong><br>
+        Jumlah: ${item.quantity} porsi @ IDR ${item.price.toLocaleString('id-ID')}<br>
+        Subtotal: IDR ${item.subtotal.toLocaleString('id-ID')}</p>
+      `;
+    });
+    confirmationHtml += `<hr><p><strong>Total Keseluruhan: IDR ${grandTotal.toLocaleString('id-ID')}</strong></p></div>`;
+
+    document.getElementById('confirmationContent').innerHTML = confirmationHtml;
+    document.getElementById('confirmationPopup').style.display = 'flex';
+  }
+
+  function confirmOrder() {
+    // Pastikan orderItems terupdate sebelum confirm
+    if (orderItems.length === 0) {
+      alert('Tidak ada pesanan untuk dikonfirmasi.');
+      return;
+    }
+
+    const orderData = {
+      items: orderItems,
+      total: orderItems.reduce((sum, item) => sum + item.subtotal, 0)
+    };
+
+    const params = new URLSearchParams({
+      orderData: JSON.stringify(orderData)
+    });
+
+    window.location.href = `checkout.html?${params.toString()}`;
+  }
+
+  function closeConfirmation() {
+    document.getElementById('confirmationPopup').style.display = 'none';
+  }
+
+  function closeOrderForm() {
+    document.getElementById('orderPopup').style.display = 'none';
+    document.getElementById('itemsContainer').innerHTML = '';
+    itemCounter = 0;
+    orderItems = [];
+    updateOrderSummary();
+  }
+
+  document.getElementById("openOrderForm").onclick = function () {
+    document.getElementById("orderPopup").style.display = "flex";
+    if (document.querySelectorAll('.item-row').length === 0) {
+      addNewItem();
+    }
+  };
 </script>
-<script src="NK bebek.js"></script>
-<script src="fabmap.js"></script>
+
+  <script src="NK bebek.js"></script>
+  <script src="tab-ulasan.js"></script>
+<script src="fabmenu.js"></script>
+
+
+
 </body>
-<script src="NK bebek.js"></script>
 </html>

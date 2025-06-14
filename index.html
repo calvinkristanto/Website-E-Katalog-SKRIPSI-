@@ -1,76 +1,387 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>UMKM Bandungrejosari Malang</title>
-    <link rel="shortcut icon" href="Foto/icon/icon.ico" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UMKM Bandungrejosari</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Bandungrejosari</div>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-        <ul class="nav-links" id="navLinks">
-            <li><a class="active" href="#">Beranda</a></li>
-            <li><a href="lokasibandungrejosari.html">Tentang</a></li>
-        </ul>
-    </nav>
 
-    <section class="beranda">
-        <h1 style="color: #366e54;">UMKM Malang</h1>
-        <h1 style="color: #17242D;">Bandungrejosari</h1>
-        <p>Produk UMKM Bandungrejosari ada disini</p>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Bandungrejosari</div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#food">Food</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="beranda">
+    <h1>Selamat Datang di UMKM Bandungrejosari</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a libero nec lectus sollicitudin ultricies non in eros. Duis aliquet ante vitae nunc pretium.
+
+Curabitur pretium dui sit amet ante iaculis, id sodales mi tempus. Integer pretium, felis et blandit pharetra.</p>
+  </section>
+
+
+
+  <!-- Produk UMKM -->
+<main id="food">
+  <div class="title">
+    <h1>Produk UMKM</h1>
+  </div>
+  <div class="box">
+
+    <div class="box1 fade-in">
+      <a href="Makanan&Minuman.html">
+        <img src="Foto/Makanan.jpg" alt="Makanan & Minuman">
+        <div class="judul">
+          <h1>Makanan & Minuman</h1>
+          <p>Aneka makanan dan minuman segar dari pelaku UMKM lokal.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="box1 fade-in">
+      <a href="Nasi-Kotak.html">
+        <img src="Foto/Nasi Kotak.jpg" alt="Nasi Kotak">
+        <div class="judul">
+          <h1>Nasi Kotak</h1>
+          <p>Paket nasi praktis untuk acara, rapat, dan kebutuhan harian.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="box1 fade-in">
+      <a href="kue.html">
+        <img src="Foto/Kue.jpg" alt="Kue">
+        <div class="judul">
+          <h1>Kue</h1>
+          <p>Kue tradisional dan modern dengan rasa khas UMKM rumahan.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="box1 fade-in">
+      <img src="Foto/Kerajinan Tangan.jpg" alt="Kerajinan Tangan">
+      <div class="judul">
+        <h1>Kerajinan Tangan</h1>
+        <p>Produk kreatif buatan tangan seperti aksesoris, anyaman, dan souvenir.</p>
+      </div>
+    </div>
+
+  </div>  
+</main>
+
+
+
+  <!-- Galeri -->
+<section class="gallery-section">
+  <div class="gallery-container">
+    <div class="gallery-image">
+        <div class="slider">
+          <img src="Foto/Makanan.jpg" alt="Slide 1" class="slide active">
+          <img src="Foto/Makanan2.jpg" alt="Slide 2" class="slide">
+          <img src="Foto/Makanan3.jpg" alt="Slide 3" class="slide">
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </div>
+    <div class="gallery-text">
+      <button class="about-btn">About Us</button>
+      <h1 class="gallery-title">Galeri Bandungrejosari Malang</h1>
+      <p class="gallery-desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a libero nec lectus
+        sollicitudin ultricies non in eros. Duis aliquet ante vitae nunc pretium.
+      </p>
+      <p class="gallery-desc">
+        Curabitur pretium dui sit amet ante iaculis, id sodales mi tempus. Integer pretium,
+        felis et blandit pharetra.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Tentang -->
+ <section id="about">
+  <div class="about-content">
+    <div class="about-text">
+      <h1 class="about-title">Produk UMKM Bandungrejosari</h1>
+      <p class="about-desc">
+        Produk Bandungrejosari adalah platform yang menghadirkan berbagai makanan khas dari UMKM Bandungrejosair. Kami mendukung pelaku usaha kecil untuk memasarkan produk mereka secara digital.
+        <br><br>
+        Dari UMKM Nasi Kotak, Kue, Makanan & Minuman, serta produk kerajinan tangan semua tersedia di sini!
+      </p>
+      <button class="learn-more">Pelajari Lebih Lanjut</button>
+    </div>
+    <div class="about-image-container">
+      <div class="about-image" >
+          <div class="experience-card">
+          <div class="experience-number">2+</div>
+          <div class="experience-text">Tahun Pengalaman</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <h1 class="contact-title">Kirim Pesan</h1>
+                <p class="contact-subtitle">
+                    Jika kamu tertarik bekerja sama atau ingin tahu lebih banyak tentang Bandungrejosari, hubungi kami melalui informasi berikut.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Alamat</h3>
+                            <p>Jl. blabla No. 123, Malang<br>Jawa Timur, Indonesia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>info@Bandungrejosari.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Telepon</h3>
+                            <p>+62 812-3456-7890</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="social-section">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <div class="success-message" id="successMessage">
+                    Pesan Anda berhasil dikirim! Kami akan segera menghubungi Anda.
+                </div>
+                
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Nama Depan" required>
+                            <div class="error-message" id="firstNameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Nama Belakang">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Alamat Email" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Nomor Telepon">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <textarea id="message" name="message" class="form-input textarea-input" placeholder="Pesan Anda" required></textarea>
+                        <div class="error-message" id="messageError"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
     </section>
 
-    <main>
-        <div class="title">
-            <h1>Produk UMKM</h1>
-        </div>
-        <div class="box">
-            <div class="box1">
-                <a href="Makanan & Minuman.html">
-                    <img src="Foto/Makanan.jpg" alt="Makanan & Minuman">
-                    <div class="judul"><h1>Makanan & Minuman</h1></div>
-                </a>
-            </div>
-            <div class="box1">
-                <a href="Nasi Kotak.html">
-                    <img src="Foto/Nasi Kotak.jpg" alt="Nasi Kotak">
-                    <div class="judul"><h1>Nasi Kotak</h1></div>
-                </a>
-            </div>
-            <div class="box1">
-                <a href="kue.html">
-                    <img src="Foto/Kue.jpg" alt="Kue">
-                    <div class="judul"><h1>Kue</h1></div>
-                </a>
-            </div>
-            <div class="box1">
-                <img src="Foto/Kerajinan Tangan.jpg" alt="Kerajinan Tangan">
-                <div class="judul"><h1>Kerajinan Tangan</h1></div>
-            </div>
-        </div>
-    </main>
-
     <script>
-        const toggleButton = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        toggleButton.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Reset previous errors
+            const errorElements = document.querySelectorAll('.error-message');
+            const inputElements = document.querySelectorAll('.form-input');
+            
+            errorElements.forEach(el => el.textContent = '');
+            inputElements.forEach(el => el.classList.remove('error'));
+            
+            // Validate form
+            let isValid = true;
+            
+            const firstName = document.getElementById('firstName');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+            
+            if (!firstName.value.trim()) {
+                document.getElementById('firstNameError').textContent = 'Nama depan wajib diisi.';
+                firstName.classList.add('error');
+                isValid = false;
+            }
+            
+            if (!email.value.trim()) {
+                document.getElementById('emailError').textContent = 'Email wajib diisi.';
+                email.classList.add('error');
+                isValid = false;
+            } else if (!isValidEmail(email.value)) {
+                document.getElementById('emailError').textContent = 'Format email tidak valid.';
+                email.classList.add('error');
+                isValid = false;
+            }
+            
+            if (!message.value.trim()) {
+                document.getElementById('messageError').textContent = 'Pesan wajib diisi.';
+                message.classList.add('error');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show success message
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // Reset form
+                this.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 5000);
+            }
         });
-
-        // Optional: Tutup menu otomatis setelah klik link (di mobile)
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+        
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        // Add smooth focus effects
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.style.transform = 'scale(1)';
             });
         });
     </script>
+
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px; background-color: #061b25; color: white;">
+    &copy; 2025 Bandungrejosari. All rights reserved.
+  </footer>
+
+  <!-- JS Menu dan Animasi -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Animasi saat box masuk ke viewport
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const boxes = document.querySelectorAll('.box1');
+    boxes.forEach(box => observer.observe(box));
+  </script>
+
+  <script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+
+  function scrollAnimation() {
+    const elements = document.querySelectorAll('.fade-in');
+
+    elements.forEach(el => {
+      if (isInViewport(el)) {
+        el.classList.add('show');
+      } else {
+        el.classList.remove('show'); // kalau mau animasi sekali muncul saja, hapus baris ini
+      }
+    });
+  }
+
+  window.addEventListener('scroll', scrollAnimation);
+  window.addEventListener('load', scrollAnimation);
+</script>
+
+<script>
+ 
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+  }
+
+  function changeSlide(step) {
+    currentSlide = (currentSlide + step + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Optional: auto-slide
+  // setInterval(() => changeSlide(1), 5000);
+</script>
+
 </body>
 </html>

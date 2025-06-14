@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake-&-Cookis</title>
+    <link rel="stylesheet" href="allforkue.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<header class="page-header">
+    <h1>Cake & Cookis</h1>
+</header>
+<body>
+    <div class="content-container">
+    
+        
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <figure>
+                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donat Glaze Coklat.jpg">
+                        <figcaption>Donat Glaze Coklat</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donat Glaze Strawberry.jpg">
+                        <figcaption>Donat Glaze Strawberry</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donut Glaze Blueberry.jpg">
+                        <figcaption>Donut Glaze Blueberry</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donut Glaze Grentea.jpg">
+                        <figcaption>Donut Green Tea</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donut Glaze Tarou.jpg">
+                        <figcaption>Donut Glaze Tarou</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donut Glaze Tiramisu.jpg">
+                        <figcaption>Donut Glaze Tiramisu.jpg</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donat Glaze Medium 6.jpg">
+                        <figcaption>Donat Glaze Medium 6 pcs</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donat Glaze Medium 12.jpg">
+                        <figcaption>Donat Glaze Medium 12 pcs</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="slider-buttons">
+                <button class="slider-btn prev">❮</button>
+                <button class="slider-btn next">❯</button>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="hours">
+                <span class="icons">
+                    <span class="material-symbols-outlined">calendar_today</span>
+                    <p>Hari:Senin-Minggu</p>
+                </span>
+                <span class="icons">
+                    <span class="material-symbols-outlined">schedule</span>
+                    <p>Jam:10.00-20.30</p>
+                </span>
+            </div>
+
+            <div class="description">
+                <p>🍩 Donat Kentang Susu Del Luna – Surga Donat dengan Beragam Varian!
+                    Lembut, manis, dan bikin ketagihan!</p>
+                <ul>
+                  <li>✅ Tersedia berbagai varian topping & isian</li>
+                  <li>✅ Cocok untuk camilan, hampers, atau acara spesial</li>
+                  <li>✅ Fresh setiap hari & dibuat dengan cinta</li>
+                </ul>
+                <p>📲 Yuk cobain donat dari Donut Kentang Susu Del Luna!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fab-container">
+        <div class="fab-menu" id="fabMenu">
+            <div class="menufab">
+                <a href="https://wa.me/6281230110217" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 1 - Bu Emiliah</p>
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6281252548695" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 2 - Bu Rika</p> 
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6282331257449" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 3 - Bu Indrayani</p>
+                </a>
+            </div>
+            
+
+            <div class="menufab">
+                <button class="fab-item" id="openMap">
+                    <img src="Foto/icon/maps.png" alt="Map" class="fab-logo">
+                    <p>Map</p>
+                </button>
+            </div>
+            
+            <!-- Modal untuk Google Maps -->
+            <div id="mapContainer" class="map-overlay">
+                <div class="map-content">
+                    <iframe 
+                        id="mapFrame"
+                        src=""
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <button class="close-map" id="closeMap">✖</button>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="fab-button" onclick="toggleMenu()">
+            <img src="Foto/icon/whatsapp.png" alt="WhatsApp" class="fab-icon">
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("fabMenu");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    }
+</script>
+<script src="NK bebek.js"></script>
+<script src="fabmap.js"></script>
+</body>
+<script src="NK bebek.js"></script>
+</html>

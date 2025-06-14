@@ -9,7 +9,7 @@ document.getElementById("searchBox").addEventListener("input", function() {
     
     items.forEach(item => {
         let text = item.querySelector("h1").textContent.toLowerCase();
-        if (text.includes(searchValue)) {
+        if (text.startsWith(searchValue)) {
             item.style.display = "block";
         } else {
             item.style.display = "none";
