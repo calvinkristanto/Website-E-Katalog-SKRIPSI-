@@ -25,9 +25,9 @@
 <body>
     <section class="container">
         <div class="slider-wrapper" id="slider">
-            <img src="Foto/Makanan & Minuman/1.jpg" alt="Nasi Bebek">
-            <img src="Foto/Makanan & Minuman/2.jpg" alt="Nasi Bento">
-            <img src="Foto/Nasi Kotak/UMKM 3.png" alt="Nasi Campur">
+            <img src="Foto/Kue/Beranda/1.jpg" alt="Nasi Bebek">
+            <img src="Foto/Kue/Beranda/2.jpg" alt="Nasi Bento">
+            <img src="Foto/Kue/Beranda/3.jpg" alt="Nasi Campur">
         </div>
 
         <div class="button">
@@ -41,7 +41,7 @@
             <span onclick="goToSlide(2)"></span>
         </div>
     </section>
-
+    
     <section>
         <div class="judul2">
             <h3>Produk UMKM Makanan & Minuman</h3>
@@ -55,69 +55,164 @@
                     <label for="sort" class="custom-sort-button">
                         <span class="material-symbols-outlined">sort</span>
                     </label>
-                    <select id="sort">
-                        <option value="asc">A-Z</option>
-                        <option value="desc">Z-A</option>
+                   <select id="sort">
+                        <option value="asc">Nama A-Z</option>
+                        <option value="desc">Nama Z-A</option>
+                        <option value="harga-asc">Harga Terendah</option>
+                        <option value="harga-desc">Harga Tertinggi</option>
                     </select>
-            </div>            
+
+            </div>
         </div>
     </section>
 
+
     <main>
 
-        <div class="boxnasikotak" id="product-list">
-            <div class="item">
-                <div class="box2">
-                    <a href="Ayummy Kuker.html">
-                        <img src="Foto/Kue/Ayummy Kuker/beranda.jpg">
-                    </a>
-                </div>
-                <div class="boxdes">
-                    <a href="Ayummy Kuker.html">
-                        <h1>Ayummy Kuker</h1>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="item">
-                <div class="box2">
-                    <a href="AIRA COOKIES.html">
-                        <img src="Foto/Kue/Aira Cookies/beranda.jpg">
-                    </a>
-                </div>
-                <div class="boxdes">
-                    <a href="AIRA COOKIES.html">
-                        <h1>Aira Cookies</h1>
-                    </a>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="box2">
-                    <a href="Jenny Baker.html">
-                        <img src="Foto/Kue/Jenny Baker/Donut Green Tea.jpg">
-                    </a>
-                </div>
-                <div class="boxdes">
-                    <a href="Jenny Baker.html">
-                        <h1>Jenny Baker</h1>
-                    </a>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="box2">
-                    <a href="Donat Kentang Susu Del Luna.html">
-                        <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donut Glaze Blueberry.jpg">
-                    </a>
-                </div>
-                <div class="boxdes">
-                    <a href="Donat Kentang Susu Del Luna.html">
-                        <h1>Donat  Del Luna</h1>
-                    </a>
-                </div>
-            </div>
+            <div class="boxnasikotak" id="product-list">
+    <div class="item">
+        <div class="box2">
+        <a href="Ayummy Kuker.html">
+            <img src="Foto/Kue/Ayummy Kuker/beranda.jpg" alt="Ayummy Kuker">
+        </a>
         </div>
+        <div class="boxdes">
+        <a href="Ayummy Kuker.html">
+            <h1>Ayummy Kuker</h1>
+            <p class="harga">Harga mulai dari Rp30.000</p>
+        </a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="box2">
+        <a href="AIRA COOKIES.html">
+            <img src="Foto/Kue/Aira Cookies/beranda.jpg" alt="Aira Cookies">
+        </a>
+        </div>
+        <div class="boxdes">
+        <a href="AIRA COOKIES.html">
+            <h1>Aira Cookies</h1>
+            <p class="harga">Harga mulai dari Rp25.000</p>
+        </a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="box2">
+        <a href="Jenny Baker.html">
+            <img src="Foto/Kue/Jenny Baker/Donut Green Tea.jpg" alt="Jenny Baker">
+        </a>
+        </div>
+        <div class="boxdes">
+        <a href="Jenny Baker.html">
+            <h1>Jenny Baker</h1>
+            <p class="harga">Harga mulai dari Rp28.000</p>
+        </a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="box2">
+        <a href="Donat Kentang Susu Del Luna.html">
+            <img src="Foto/Kue/Donut Kentang Susu Del Luna/Donut Glaze Blueberry.jpg" alt="Donat Del Luna">
+        </a>
+        </div>
+        <div class="boxdes">
+        <a href="Donat Kentang Susu Del Luna.html">
+            <h1>Donat Del Luna</h1>
+            <p class="harga">Harga mulai dari Rp20.000</p>
+        </a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="box2">
+        <a href="Cromboloni Yaya.html">
+            <img src="Foto/Kue/Cromboloni Yaya/1.jpg" alt="Donat Del Luna">
+        </a>
+        </div>
+        <div class="boxdes">
+        <a href="Cromboloni Yaya.html">
+            <h1>Cromboloni Yaya</h1>
+            <p class="harga">Harga mulai dari Rp15.000</p>
+        </a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="box2">
+        <a href="Pastry Nana.html">
+            <img src="Foto/Kue/Pastry Nana/2.jpg" alt="Donat Del Luna">
+        </a>
+        </div>
+        <div class="boxdes">
+        <a href="Pastry Nana.html">
+            <h1>Pastry Nana</h1>
+            <p class="harga">Harga mulai dari Rp20.000</p>
+        </a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="box2">
+        <a href="Toko Kue Halimah.html">
+            <img src="Foto/Kue/Toko Kue Halimah/3.jpg" alt="Donat Del Luna">
+        </a>
+        </div>
+        <div class="boxdes">
+        <a href="Toko Kue Halimah.html">
+            <h1>Toko Kue Halimah</h1>
+            <p class="harga">Harga mulai dari Rp20.000</p>
+        </a>
+        </div>
+    </div>
+
+     <div class="item">
+        <div class="box2">
+        <a href="Kue Kampoeng.html">
+            <img src="Foto/Kue/Kue Kampoeng/3.jpg" alt="Donat Del Luna">
+        </a>
+        </div>
+        <div class="boxdes">
+        <a href="Kue Kampoeng.html">
+            <h1>Kue Kampoeng</h1>
+            <p class="harga">Harga mulai dari Rp4.000</p>
+        </a>
+        </div>
+    </div>
+
+     <div class="item">
+        <div class="box2">
+        <a href="Rumah Jajan Bu Ari.html">
+            <img src="Foto/Kue/Rumah Jajan Bu Ari/2.jpg" alt="Donat Del Luna">
+        </a>
+        </div>
+        <div class="boxdes">
+        <a href="Rumah Jajan Bu Ari.html">
+            <h1>Rumah Jajan Bu Ari</h1>
+            <p class="harga">Harga mulai dari Rp5.000</p>
+        </a>
+        </div>
+    </div>
+
+     <div class="item">
+        <div class="box2">
+        <a href="Kedai Jajan Jepang Hiroki.html">
+            <img src="Foto/Kue/Kedai Jajan Jepang Hiroki/1.jpg" alt="Donat Del Luna">
+        </a>
+        </div>
+        <div class="boxdes">
+        <a href="Kedai Jajan Jepang Hiroki.html">
+            <h1>Kedai Jajan Jepang Hiroki</h1>
+            <p class="harga">Harga mulai dari Rp20.000</p>
+        </a>
+        </div>
+    </div>
+    </div>
+
+
+    
     </main>
         
     <div class="fab-container">
@@ -148,27 +243,39 @@
     </script>
     
     <script>
-        document.getElementById("sort").addEventListener("change", function () {
-            const sortBy = this.value;
-            const container = document.getElementById("product-list");
-            const items = Array.from(container.getElementsByClassName("item"));
-    
-            items.sort((a, b) => {
-                const titleA = a.querySelector(".boxdes h1").textContent.toLowerCase();
-                const titleB = b.querySelector(".boxdes h1").textContent.toLowerCase();
-    
-                if (sortBy === "asc") {
-                    return titleA.localeCompare(titleB);
-                } else {
-                    return titleB.localeCompare(titleA);
-                }
-            });
-    
-            // Hapus semua item lalu tambahkan urutan baru
-            container.innerHTML = "";
-            items.forEach(item => container.appendChild(item));
-        });
-    </script>
+document.getElementById("sort").addEventListener("change", function () {
+    const sortBy = this.value;
+    const container = document.getElementById("product-list");
+    const items = Array.from(container.getElementsByClassName("item"));
+
+    items.sort((a, b) => {
+        const titleA = a.querySelector(".boxdes h1").textContent.toLowerCase();
+        const titleB = b.querySelector(".boxdes h1").textContent.toLowerCase();
+
+        const hargaTextA = a.querySelector(".harga").textContent.replace(/[^\d]/g, "");
+        const hargaTextB = b.querySelector(".harga").textContent.replace(/[^\d]/g, "");
+        const hargaA = parseInt(hargaTextA);
+        const hargaB = parseInt(hargaTextB);
+
+        switch (sortBy) {
+            case "asc":
+                return titleA.localeCompare(titleB);
+            case "desc":
+                return titleB.localeCompare(titleA);
+            case "harga-asc":
+                return hargaA - hargaB;
+            case "harga-desc":
+                return hargaB - hargaA;
+            default:
+                return 0;
+        }
+    });
+
+    container.innerHTML = "";
+    items.forEach(item => container.appendChild(item));
+});
+</script>
+
       
 </body>
 

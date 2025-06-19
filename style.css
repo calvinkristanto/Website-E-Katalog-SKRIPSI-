@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f5e0ce;
+    background-color: #f3e3d6;
 }
 
 /* Navbar */
@@ -94,25 +94,60 @@ body {
 
 /* Beranda Section */
 .beranda {
-    background-image: url(Foto/background.jpg);
-    height: 100vh;
+    position: relative;
+    background-image: url("Foto/background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     padding: 0 40px;
-    color: #17242D;
+    color: white;
     text-align: left;
+}
+
+/* Overlay gelap */
+.beranda::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* bayangan gelap */
+    z-index: 0;
+}
+
+/* Konten di atas overlay */
+.beranda .content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
 }
 
 .beranda h1 {
     font-size: 48px;
+    margin-bottom: 16px;
 }
 
 .beranda p {
     font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.beranda .btn {
+    background-color: #e53935;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.beranda .btn:hover {
+    background-color: #d32f2f;
 }
 
 @media (max-width: 768px) {
@@ -133,87 +168,107 @@ body {
 /* Section Food / Produk */
 
 #food {
-  background-color: #ffe7cb;
-  padding: 80px 20px 40px;
-  text-align: center;
-  min-height: 100vh;
+    background-color: #fef6f0;
+    padding: 70px 20px 60px;
+    text-align: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #food .title h1 {
-  font-size: 35px;
-  margin-bottom: 60px;
-  color: #1e1e1e;
-  text-shadow: 2px 2px #173b6c;
-  line-height: 1.2;
-  margin-bottom:150px ;
+    font-size: 42px;
+    color: #1e293b;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin-bottom: 150px;
 }
-
-
 
 .box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .box1 {
-  background-color: #ffffff;
-  width: 300px;
-  height: 300px;
-  border-radius: 16px;
-  padding: 70px 20px 20px 20px;
+  background-color: #fff;
+  width: 280px;
+  padding: 90px 25px 30px;
+  border-radius: 20px;
   position: relative;
   text-align: center;
-  box-shadow: 6px 6px 0 #1e3a8a;
-  transition: all 0.3s ease;
-  margin-bottom: 60px; /* ✅ Tambahkan ini untuk spasi antar card */
+  box-shadow: 6px 6px 0 #1e3a8a; /* Bayangan biru */
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 100px; /* Spasi antar box */
 }
 
-
 .box1:hover {
-  transform: translateY(-10px);
-  box-shadow: 8px 8px 0 #1e3a8a;
+  transform: translateY(-12px);
+  box-shadow: 10px 10px 0 #1e3a8a;
 }
 
 .box1 img {
-  width: 180px;
-  height: 180px;
+  width: 220px;          
+  height: 220px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #f87171; /* merah salmon */
   position: absolute;
-  top: -70px;
+  top: -100px;           
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
 }
-
 .box1 .judul h1 {
-  /* Atur styling h1 di sini */
-  margin-top: 45px;
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
 }
 
 .box1 .judul p {
-  /* Atur styling p di sini */
-  font-size: 16px;
-  color: #666;
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
+.box1 .judul h1 {
+    margin-top: 50px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e293b;
+}
 
-
-.box1:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+.box1 .judul p {
+    font-size: 16px;
+    color: #6b7280;
+    margin-top: 10px;
 }
 
 .box1 a {
     color: inherit;
     text-decoration: none;
 }
+@media (max-width: 768px) {
+  .box1 {
+    width: 70%;
+    margin: 0 auto 100px;
+  }
+
+  .box1 img {
+    width: 200px;
+    height: 200px;
+    top: -90px;
+  }
+
+  .box1 .judul h1 {
+    margin-top: 50px;
+    font-size: 18px;
+  }
+
+  .box1 .judul p {
+    font-size: 14px;
+  }
+}
+
 
 .gallery-container {
   display: flex;
@@ -414,15 +469,9 @@ body {
   cursor: pointer;
 }
 
-.about-title {
-  font-size: 2.5rem;
-  margin-top: 20px;
-  color: #1A1A1A;
-  text-shadow: 2px 2px #5971A6;
-}
 
 .about-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-top: 20px;
   color: #1A1A1A;
   text-shadow: 2px 2px #5971A6;
@@ -498,6 +547,8 @@ body {
   color: white;
 }
 
+
+/*2*/
 .about-title {
   font-size: 42px;
   font-weight: 700;
@@ -795,6 +846,26 @@ body {
     animation: slideInRight 1s ease-out;
 }
 
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+
 .form-row {
     display: flex;
     gap: 20px;
@@ -975,3 +1046,5 @@ body {
     text-align: center;
     display: none;
 }
+
+

@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -28,12 +30,14 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="beranda">
-    <h1>Selamat Datang di UMKM Bandungrejosari</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a libero nec lectus sollicitudin ultricies non in eros. Duis aliquet ante vitae nunc pretium.
+  <section class="beranda">
+  <div class="content">
+    <h1>Selamat Datang di<br>UMKM Bandungrejosari</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Curabitur a libero cis selectus isoulutatis non lit eos.</p>
+    <button class="btn">Pelajari Lebih Lanjut</button>
+  </div>
+</section>
 
-Curabitur pretium dui sit amet ante iaculis, id sodales mi tempus. Integer pretium, felis et blandit pharetra.</p>
-  </section>
 
 
 
@@ -88,9 +92,9 @@ Curabitur pretium dui sit amet ante iaculis, id sodales mi tempus. Integer preti
 
 
   <!-- Galeri -->
-<section class="gallery-section">
+<section class="gallery-section fade-in-up">
   <div class="gallery-container">
-    <div class="gallery-image">
+    <div class="gallery-image fade-in-up">
         <div class="slider">
           <img src="Foto/Makanan.jpg" alt="Slide 1" class="slide active">
           <img src="Foto/Makanan2.jpg" alt="Slide 2" class="slide">
@@ -99,7 +103,7 @@ Curabitur pretium dui sit amet ante iaculis, id sodales mi tempus. Integer preti
           <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
     </div>
-    <div class="gallery-text">
+    <div class="gallery-text fade-in-up">
       <button class="about-btn">About Us</button>
       <h1 class="gallery-title">Galeri Bandungrejosari Malang</h1>
       <p class="gallery-desc">
@@ -115,128 +119,128 @@ Curabitur pretium dui sit amet ante iaculis, id sodales mi tempus. Integer preti
 </section>
 
 
-  <!-- Tentang -->
- <section id="about">
+
+<!-- Tentang -->
+<section id="about" class="fade-in-up">
   <div class="about-content">
-    <div class="about-text">
+    <div class="about-text fade-in-up">
       <h1 class="about-title">Produk UMKM Bandungrejosari</h1>
       <p class="about-desc">
-        Produk Bandungrejosari adalah platform yang menghadirkan berbagai makanan khas dari UMKM Bandungrejosair. Kami mendukung pelaku usaha kecil untuk memasarkan produk mereka secara digital.
+        Produk Bandungrejosari adalah platform yang menghadirkan berbagai makanan khas dari UMKM Bandungrejosari. Kami mendukung pelaku usaha kecil untuk memasarkan produk mereka secara digital.
         <br><br>
         Dari UMKM Nasi Kotak, Kue, Makanan & Minuman, serta produk kerajinan tangan semua tersedia di sini!
       </p>
       <button class="learn-more">Pelajari Lebih Lanjut</button>
     </div>
-    <div class="about-image-container">
-      <div class="about-image" >
-          <div class="experience-card">
+    <div class="about-image-container fade-in-up">
+      <div class="about-image">
+        <div class="experience-card">
           <div class="experience-number">2+</div>
           <div class="experience-text">Tahun Pengalaman</div>
+        </div>
       </div>
-      
     </div>
   </div>
 </section>
 
 
 
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-info">
-                <h1 class="contact-title">Kirim Pesan</h1>
-                <p class="contact-subtitle">
-                    Jika kamu tertarik bekerja sama atau ingin tahu lebih banyak tentang Bandungrejosari, hubungi kami melalui informasi berikut.
-                </p>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Alamat</h3>
-                            <p>Jl. blabla No. 123, Malang<br>Jawa Timur, Indonesia</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>info@Bandungrejosari.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Telepon</h3>
-                            <p>+62 812-3456-7890</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="divider"></div>
-                
-                <div class="social-section">
-                    <h3>Ikuti Kami</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-link twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link youtube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-link linkedin">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="contact-form">
-                <div class="success-message" id="successMessage">
-                    Pesan Anda berhasil dikirim! Kami akan segera menghubungi Anda.
-                </div>
-                
-                <form id="contactForm" novalidate>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Nama Depan" required>
-                            <div class="error-message" id="firstNameError"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Nama Belakang">
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" class="form-input" placeholder="Alamat Email" required>
-                            <div class="error-message" id="emailError"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Nomor Telepon">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <textarea id="message" name="message" class="form-input textarea-input" placeholder="Pesan Anda" required></textarea>
-                        <div class="error-message" id="messageError"></div>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Kirim Pesan</button>
-                </form>
-            </div>
+    <section class="contact-section fade-in-up">
+  <div class="container">
+    
+    <!-- Info Kontak -->
+    <div class="contact-info fade-in-up delay-1">
+      <h1 class="contact-title">Kirim Pesan</h1>
+      <p class="contact-subtitle">
+        Jika kamu tertarik bekerja sama atau ingin tahu lebih banyak tentang Bandungrejosari, hubungi kami melalui informasi berikut.
+      </p>
+
+      <!-- Detail Kontak -->
+      <div class="contact-details">
+        <div class="contact-item fade-in-up delay-2">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Alamat</h3>
+            <p>Jl. blabla No. 123, Malang<br>Jawa Timur, Indonesia</p>
+          </div>
         </div>
-    </section>
+
+        <div class="contact-item fade-in-up delay-3">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Email</h3>
+            <p>info@Bandungrejosari.com</p>
+          </div>
+        </div>
+
+        <div class="contact-item fade-in-up delay-4">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Telepon</h3>
+            <p>+62 812-3456-7890</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider fade-in-up delay-5"></div>
+
+      <!-- Sosial Media -->
+      <div class="social-section fade-in-up delay-6">
+        <h3>Ikuti Kami</h3>
+        <div class="social-links">
+          <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Kontak -->
+    <div class="contact-form fade-in-up delay-7">
+      <div class="success-message" id="successMessage">
+        Pesan Anda berhasil dikirim! Kami akan segera menghubungi Anda.
+      </div>
+
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Nama Depan" required>
+            <div class="error-message" id="firstNameError"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Nama Belakang">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <input type="email" id="email" name="email" class="form-input" placeholder="Alamat Email" required>
+            <div class="error-message" id="emailError"></div>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Nomor Telepon">
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <textarea id="message" name="message" class="form-input textarea-input" placeholder="Pesan Anda" required></textarea>
+          <div class="error-message" id="messageError"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Kirim Pesan</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -316,27 +320,6 @@ Curabitur pretium dui sit amet ante iaculis, id sodales mi tempus. Integer preti
   </footer>
 
   <!-- JS Menu dan Animasi -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Animasi saat box masuk ke viewport
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    const boxes = document.querySelectorAll('.box1');
-    boxes.forEach(box => observer.observe(box));
-  </script>
 
   <script>
   function isInViewport(element) {
@@ -364,24 +347,43 @@ Curabitur pretium dui sit amet ante iaculis, id sodales mi tempus. Integer preti
 </script>
 
 <script>
- 
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".slide");
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
+  function animateOnScroll() {
+    document.querySelectorAll('.fade-in').forEach(el => {
+      if (isInViewport(el)) {
+        el.classList.add('show');
+      } else {
+        el.classList.remove('show'); // kalau ingin animasi sekali saja, hapus baris ini
+      }
     });
   }
 
-  function changeSlide(step) {
-    currentSlide = (currentSlide + step + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  // Optional: auto-slide
-  // setInterval(() => changeSlide(1), 5000);
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
 </script>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show'); // Biar animasi bisa diulang
+      }
+    });
+  }, {
+    threshold: 0.1 // bisa disesuaikan
+  });
+
+  document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
+</script>
+
+
+
 
 </body>
 </html>
