@@ -18,30 +18,28 @@
 <body>
 
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">Bandungrejosari</div>
-    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#food">Food</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-  </header>
+  <!-- Navbar -->
+<header class="navbar">
+  <div class="logo">Bandungrejosari</div>
+  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#food">Food</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+</header>
 
-  <!-- Hero Section -->
-  <section class="beranda">
+<!-- Hero Section (Beranda) -->
+<section id="home" class="beranda">
   <div class="content">
     <h1>Selamat Datang di<br>UMKM Bandungrejosari</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Curabitur a libero cis selectus isoulutatis non lit eos.</p>
-    <button class="btn">Pelajari Lebih Lanjut</button>
+    <p>Jelajahi UMKM Makanan & Produk hasil karya warga lokal.</p>
+    <a href="#food" class="btn">Pelajari Lebih Lanjut</a>
   </div>
 </section>
 
-
-
-
-  <!-- Produk UMKM -->
+<!-- Produk UMKM -->
 <main id="food">
   <div class="title">
     <h1>Produk UMKM</h1>
@@ -79,73 +77,70 @@
     </div>
 
     <div class="box1 fade-in">
-      <img src="Foto/Kerajinan Tangan.jpg" alt="Kerajinan Tangan">
-      <div class="judul">
-        <h1>Kerajinan Tangan</h1>
-        <p>Produk kreatif buatan tangan seperti aksesoris, anyaman, dan souvenir.</p>
-      </div>
+      <a href="Kerajinantangan.html">
+        <img src="Foto/Kerajinan Tangan.jpg" alt="Kerajinan Tangan">
+        <div class="judul">
+          <h1>Kerajinan Tangan</h1>
+          <p>Produk kreatif buatan tangan seperti aksesoris, anyaman, dan souvenir.</p>
+        </div>
+      </a>
     </div>
 
   </div>  
 </main>
 
 
-
-  <!-- Galeri -->
-<section class="gallery-section fade-in-up">
+<!-- Galeri -->
+<section id="about" class="gallery-section fade-in-up">
   <div class="gallery-container">
     <div class="gallery-image fade-in-up">
-        <div class="slider">
-          <img src="Foto/Makanan.jpg" alt="Slide 1" class="slide active">
-          <img src="Foto/Makanan2.jpg" alt="Slide 2" class="slide">
-          <img src="Foto/Makanan3.jpg" alt="Slide 3" class="slide">
-          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-          <button class="next" onclick="changeSlide(1)">&#10095;</button>
-        </div>
+      <div class="slider">
+        <img src="Foto/Kegiatan/1.jpg" alt="Slide 1" class="slide active">
+        <img src="Foto/Kegiatan/2.jpg" alt="Slide 2" class="slide">
+        <img src="Foto/Kegiatan/3.jpg" alt="Slide 3" class="slide">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
     </div>
     <div class="gallery-text fade-in-up">
       <button class="about-btn">About Us</button>
       <h1 class="gallery-title">Galeri Bandungrejosari Malang</h1>
       <p class="gallery-desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a libero nec lectus
-        sollicitudin ultricies non in eros. Duis aliquet ante vitae nunc pretium.
+        Di Bandungrejosari, kebersamaan menjadi kekuatan utama. Warga saling membantu dalam berbagai kegiatan, mulai dari produksi makanan lokal hingga menjaga lingkungan sekitar tetap asri dan nyaman.
       </p>
       <p class="gallery-desc">
-        Curabitur pretium dui sit amet ante iaculis, id sodales mi tempus. Integer pretium,
-        felis et blandit pharetra.
+        Semangat gotong royong terlihat dalam setiap kegiatan masyarakat—baik dalam mendukung UMKM, menyelenggarakan acara budaya, maupun pelatihan keterampilan untuk meningkatkan kualitas hidup bersama.
       </p>
     </div>
   </div>
 </section>
 
 
-
 <!-- Tentang -->
-<section id="about" class="fade-in-up">
+<section  class="fade-in-up">
   <div class="about-content">
     <div class="about-text fade-in-up">
-      <h1 class="about-title">Produk UMKM Bandungrejosari</h1>
+      <h1 class="about-title">Bandungrejosari dalam Lensa</h1>
       <p class="about-desc">
-        Produk Bandungrejosari adalah platform yang menghadirkan berbagai makanan khas dari UMKM Bandungrejosari. Kami mendukung pelaku usaha kecil untuk memasarkan produk mereka secara digital.
-        <br><br>
-        Dari UMKM Nasi Kotak, Kue, Makanan & Minuman, serta produk kerajinan tangan semua tersedia di sini!
+        Dalam kegiatan KKN ini, kami hadir untuk membantu UMKM Bandungrejosari tumbuh dan dikenal lebih luas. Mulai dari membuatkan desain promosi, hingga mendampingi pelaku usaha dalam mengenalkan produknya ke masyarakat.
+        Tak hanya soal usaha, kami juga belajar dan berbagi bersama warga membangun kebersamaan, menciptakan solusi, dan menanamkan semangat gotong royong demi Bandungrejosari yang lebih maju.
       </p>
-      <button class="learn-more">Pelajari Lebih Lanjut</button>
     </div>
     <div class="about-image-container fade-in-up">
       <div class="about-image">
-        <div class="experience-card">
-          <div class="experience-number">2+</div>
-          <div class="experience-text">Tahun Pengalaman</div>
-        </div>
+        <iframe 
+          src="https://www.youtube.com/embed/l0SeXbwjV18" 
+          title="Video UMKM Bandungrejosari"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
   </div>
 </section>
 
-
-
-    <section class="contact-section fade-in-up">
+<!-- Kontak -->
+   <section id="contact" class="contact-section fade-in-up">
   <div class="container">
     
     <!-- Info Kontak -->
@@ -240,6 +235,7 @@
 
   </div>
 </section>
+
 
 
     <script>
@@ -386,10 +382,86 @@
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
 
+  // Toggle menu responsif
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
+
+  // ScrollSpy untuk update class .active di navbar saat scroll
+  const sections = document.querySelectorAll("section[id], main[id]");
+  const navItems = document.querySelectorAll(".nav-links a");
+
+  function updateActiveLink() {
+    let scrollY = window.scrollY;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120; // offset untuk sticky navbar
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        navItems.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + sectionId) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateActiveLink);
+  window.addEventListener("load", updateActiveLink);
 </script>
+
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slider .slide');
+  let slideInterval;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? 'block' : 'none';
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function changeSlide(n) {
+    slideIndex += n;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+    showSlide(slideIndex);
+  }
+
+  function startAutoSlide() {
+    slideInterval = setInterval(() => {
+      changeSlide(1);
+    }, 5000); // Ganti setiap 5 detik
+  }
+
+  function resetAutoSlide() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showSlide(slideIndex);
+    startAutoSlide();
+
+    // Tambahkan listener ke tombol untuk reset waktu jika diklik
+    document.querySelector('.prev').addEventListener('click', () => {
+      changeSlide(-1);
+      resetAutoSlide();
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+      changeSlide(1);
+      resetAutoSlide();
+    });
+  });
+</script>
+
 
 
 

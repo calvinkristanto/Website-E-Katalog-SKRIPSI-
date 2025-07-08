@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Kerajinantangan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=NamaFont:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sort" />
+    <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>UMKM Kerajinan Tangan</title>
+</head>
+<header class="navbar">
+    <h1>Bandungrejosari</h1>
+</header>
+
+<body>
+    <section class="container">
+        <div class="slider-wrapper" id="slider">
+            <img src="Foto/Makanan & Minuman/1.jpg" alt="Nasi Bebek">
+            <img src="Foto/Makanan & Minuman/2.jpg" alt="Nasi Bento">
+            <img src="Foto/Nasi Kotak/UMKM 3.png" alt="Nasi Campur">
+        </div>
+
+        <div class="button">
+            <span class="prev" onclick="prevSlide()">&#10094;</span>
+            <span class="next" onclick="nextSlide()">&#10095;</span>
+        </div>
+
+        <div class="slider-nav">
+            <span onclick="goToSlide(0)"></span>
+            <span onclick="goToSlide(1)"></span>
+            <span onclick="goToSlide(2)"></span>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="judul2">
+            <h3>UMKM Kerajinan Tangan</h3>
+        </div>
+    
+        <div class="search-sort-wrapper">
+            <div class="search-container">
+                <input type="text" id="searchBox" class="search-box" placeholder="Cari produk UMKM...">
+
+                <div class="sort-container">
+                    <label for="sort" class="custom-sort-button">
+                        <span class="material-symbols-outlined">sort</span>
+                    </label>
+                   <select id="sort">
+                        <option value="asc">Nama A-Z</option>
+                        <option value="desc">Nama Z-A</option>
+                        <option value="harga-asc">Harga Terendah</option>
+                        <option value="harga-desc">Harga Tertinggi</option>
+                    </select>
+
+            </div>
+
+            
+        </div>
+    </section>
+
+    
+
+      <main>
+  <div class="boxnasikotak" id="product-list">
+
+    <div class="item">
+      <div class="box2">
+        <a href="Kain Batik Hendro.html" onclick="setLastCategory('Kain Batik Hendro.html')">
+          <img src="Foto/Kerajinan Tangan/Kain Batik Hendro/2.jpg" alt="Kerajinan Tangan Batik">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Kain Batik Hendro.html" onclick="setLastCategory('Makanan & Minuman.html')">
+          <h1>Kain Batik Hendro</h1>
+          <p class="harga">Harga mulai dari Rp120.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Kursi Kayu Handoko.html" onclick="setLastCategory('Kursi Kayu Handoko.html')">
+          <img src="Foto/Kerajinan Tangan/Kursi Kayu Pak Handoko/1.jpg" alt="Kursi Kayu Handoko">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Kursi Kayu Handoko.html" onclick="setLastCategory('Kursi Kayu Handoko')">
+          <h1>Kursi Kayu Handoko</h1>
+          <p class="harga">Harga mulai dari Rp200.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Kerajinan stik eskrim Fenti.html">
+          <img src="Foto/Kerajinan Tangan/Kerajinan stik eskrim Fenti/1.jpg" alt="Kerajinan Tangan Eskrim Fenti">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Kerajinan stik eskrim Fenti.html">
+          <h1>Kerajinan Rumah Fenti</h1>
+          <p class="harga">Harga mulai dari Rp30.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Kerajinan Tanah Liat Ana.html">
+          <img src="Foto/Kerajinan Tangan/Kerajinan Tanah Liat Ana/1.jpg" alt="Kerajinan Tanah Liat Ana">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Kerajinan Tanah Liat Ana.html">
+          <h1>Kerajinan Tanah Liat Ana</h1>
+          <p class="harga">Harga mulai dari Rp70.000</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="box2">
+        <a href="Tas Rajutan Kak Indah.html">
+          <img src="Foto/Kerajinan Tangan/Tas Rajutan Kak Indah/1.jpg" alt="Tas Rajutan Kak Indah">
+        </a>
+      </div>
+      <div class="boxdes">
+        <a href="Tas Rajutan Kak Indah.html">
+          <h1>Tas Rajutan Kak Indah</h1>
+          <p class="harga">Harga mulai dari Rp15.000</p>
+        </a>
+      </div>
+    </div>
+
+
+
+
+  
+
+  </div>
+</main>
+
+
+    <div class="fab-container">
+        <div class="fab-menu" id="fabMenu">
+            <div class="menufab">
+                <a href="https://wa.me/6281230110217" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 1 - Bu Emiliah</p>
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6281252548695" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 2 - Bu Rika</p> 
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6282331257449" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 3 - Bu Indrayani</p>
+                </a>
+            </div>
+            
+
+            <div class="menufab">
+                <button class="fab-item" id="openMap">
+                    <img src="Foto/icon/maps.png" alt="Map" class="fab-logo">
+                    <p>Map</p>
+                </button>
+            </div>
+            
+            <!-- Modal untuk Google Maps -->
+            <div id="mapContainer" class="map-overlay">
+                <div class="map-content">
+                    <iframe 
+                        id="mapFrame"
+                        src=""
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <button class="close-map" id="closeMap">✖</button>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="fab-button" onclick="toggleMenu()">
+            <img src="Foto/icon/whatsapp.png" alt="WhatsApp" class="fab-icon">
+        </div>
+    </div>
+</body>
+
+
+<script>
+document.getElementById("sort").addEventListener("change", function () {
+    const sortBy = this.value;
+    const container = document.getElementById("product-list");
+    const items = Array.from(container.getElementsByClassName("item"));
+
+    items.sort((a, b) => {
+        const titleA = a.querySelector(".boxdes h1").textContent.toLowerCase();
+        const titleB = b.querySelector(".boxdes h1").textContent.toLowerCase();
+
+        const hargaTextA = a.querySelector(".harga").textContent.replace(/[^\d]/g, "");
+        const hargaTextB = b.querySelector(".harga").textContent.replace(/[^\d]/g, "");
+        const hargaA = parseInt(hargaTextA);
+        const hargaB = parseInt(hargaTextB);
+
+        switch (sortBy) {
+            case "asc":
+                return titleA.localeCompare(titleB);
+            case "desc":
+                return titleB.localeCompare(titleA);
+            case "harga-asc":
+                return hargaA - hargaB;
+            case "harga-desc":
+                return hargaB - hargaA;
+            default:
+                return 0;
+        }
+    });
+
+    container.innerHTML = "";
+    items.forEach(item => container.appendChild(item));
+});
+</script>
+
+
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("fabMenu");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    }
+</script>
+<script src="fabmap.js"></script>
+<script src="slidenasikotak.js"></script>
+<script src="search.js"></script>

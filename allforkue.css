@@ -815,4 +815,87 @@ body {
   cursor: pointer;
 }
 
+.gofood-delivery {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+.delivery-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.delivery-header .icon {
+  font-size: 28px;
+  line-height: 1;
+  color: #27ae60;
+}
+
+.delivery-header h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.delivery-header small {
+  color: #777;
+  font-size: 13px;
+  display: block;
+  margin-top: 4px;
+}
+
+.delivery-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.delivery-box {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.03);
+}
+
+.delivery-box .label {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.delivery-box strong {
+  font-size: 16px;
+  color: #1d3557;
+}
+
+.location-select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.location-select label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.location-select select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: #fff;
+}

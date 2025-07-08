@@ -141,12 +141,40 @@
 
         <!-- Konten Tab: Pengiriman -->
         <div class="tab-content" id="shipping" style="display: none;">
-          Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. 
-          Cras felis nunc commodo eu convallis vitae interdum non nisl. Maecenas ac est sit amet augue 
-          pharetra convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna 
-          congue. Damus id ullamcorper neque. Sed vitae mi a mi pretium aliquet ac sed elit. Pellentesque 
-          nulla eros accumsan quis justo at tincidunt lobortis denimes loremous. Suspendisse vestibulum 
-          lectus in lectus volutpat, ut dapibus purus pulvinar. Vestibulum sit amet auctor ipsum.
+          <div class="gofood-delivery">
+            <div class="delivery-header">
+                <div>
+                  <h4>Pengiriman Area Malang</h4>
+                  <small>Dikirim dari Malang Kota • Aman & cepat</small>
+                </div>
+            </div>
+
+            <div class="delivery-info">
+                <div class="delivery-box">
+                <span class="label">Estimasi Sampai</span>
+                <strong id="gofood-estimasi">-</strong>
+                </div>
+                <div class="delivery-box">
+                <span class="label">Ongkos Kirim</span>
+                <strong id="gofood-ongkir">-</strong>
+                </div>
+            </div>
+
+            <div class="location-select">
+                <label for="lokasi-gofood">📍 Pilih Lokasi Anda:</label>
+                <select id="lokasi-gofood">
+                <option value="">-- Pilih Lokasi --</option>
+                <option value="kota">Kota Malang</option>
+                <option value="kabupaten">Kabupaten Malang</option>
+                </select>
+            </div>
+
+            <div class="alamat-tambahan">
+              <label for="alamat-tambahan">📦 Alamat Lengkap Anda:</label>
+              <textarea id="alamat-tambahan" placeholder="Contoh: Jl. Soekarno Hatta Gg. 4 No. 10 RT 02 RW 01" rows="3"></textarea>
+            </div>
+        </div>
+        </div>
         </div>
       </section>
     </div>

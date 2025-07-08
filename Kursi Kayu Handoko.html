@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kursi Kayu Handoko</title>
+  <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="allformakanan.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+  <main class="content-container">
+    <!-- SLIDER -->
+  <div class="slider-container">
+  <div class="slider">
+    <div class="slide">
+  <figure>
+    <img src="Foto/Kerajinan Tangan/Kursi Kayu Pak Handoko/1.jpg" alt="Nasi Ayam Teriyaki">
+    <figcaption>
+      Bangku Kayu Ukuran 30x30cm<br><strong>IDR 200.000</strong>
+    </figcaption>
+  </figure>
+</div>
+<div class="slide">
+  <figure>
+    <img src="Foto/Kerajinan Tangan/Kursi Kayu Pak Handoko/2.jpg" alt="Nasi Bento">
+    <figcaption>
+      Bangku Kursi Makan<br><strong>IDR 300.000</strong>
+    </figcaption>
+  </figure>
+</div>
+<div class="slide">
+  <figure>
+    <img src="Foto/Kerajinan Tangan/Kursi Kayu Pak Handoko/3.jpg" alt="Nasi Ayam Fillet Wijen">
+    <figcaption>
+      Kursi ayaman<br><strong>IDR 550.000</strong>
+    </figcaption>
+  </figure>
+</div>
+
+  </div>
+
+  <div class="slider-buttons">
+    <button class="slider-btn prev">❮</button>
+    <button class="slider-btn next">❯</button>
+  </div>
+</div>
+
+
+
+
+          <!-- INFO TOKO -->
+  <section class="info-box" aria-label="Informasi Warung">
+    <!-- Jam Operasional -->
+    <div class="hours">
+      <div class="icons">
+        <span class="material-symbols-outlined">calendar_today</span>
+        <p>Hari: Senin - Sabtu</p>
+      </div>
+      <div class="icons">
+        <span class="material-symbols-outlined">schedule</span>
+        <p>Jam:10:00 - 17:00</p>
+      </div>
+    </div>
+
+    <!-- Detail Produk -->
+    <div class="description">
+      <section class="product-details" aria-label="Detail Produk">
+        <!-- Tab Navigasi -->
+        <div class="tabs">
+          <button class="tab-button active" data-tab="description">Deskripsi</button>
+          <button class="tab-button" data-tab="review">Ulasan</button>
+          <button class="tab-button" data-tab="shipping">Pengiriman</button>
+        </div>
+
+        <!-- Konten Tab: Deskripsi -->
+        <div class="tab-content" id="description">
+      <strong>Kursi Kayu Handoko</strong> adalah produk mebel berkualitas buatan tangan lokal yang menggabungkan kekuatan material kayu solid dengan desain elegan dan fungsional. Cocok digunakan untuk ruang tamu, ruang makan, café, maupun ruang kerja yang ingin menghadirkan nuansa alami dan klasik.<br><br>
+
+        <strong>Material:</strong> Kayu jati,atau kayu  pilihan yang telah melalui proses oven dan finishing halus untuk daya tahan jangka panjang.<br>
+        <strong>Warna:</strong> Natural, coklat tua, walnut, atau custom sesuai permintaan.<br>
+        <strong>Finishing:</strong> Melamine, doff, atau glossy tergantung kebutuhan estetika.<br><br>
+
+        <strong>Keunggulan Kursi Kayu Handoko:</strong><br>
+        ✔️ Konstruksi kokoh, awet bertahun-tahun<br>
+        ✔️ Desain ergonomis & nyaman digunakan<br>
+        ✔️ Cocok untuk berbagai konsep interior — minimalis, klasik, rustic, hingga modern<br>
+        ✔️ Bisa custom ukuran & warna sesuai permintaan pelanggan<br><br>
+
+        Produk ini cocok bagi Anda yang menghargai kualitas dan keindahan kayu asli Indonesia. Pesan satuan maupun partai besar untuk rumah pribadi, kantor, atau bisnis Anda.<br><br>
+
+        <strong>Harga mulai dari:</strong> IDR 350.000 (tergantung model dan bahan)
+
+        </div>
+        <!-- Konten Tab: Ulasan -->
+        <div class="tab-content" id="review" style="display: none;">
+          <!-- Review Dummy -->
+          <div class="review-item">
+            <p><strong>Aditya</strong> ⭐⭐⭐⭐⭐</p>
+            <p>Kursinya sangat kokoh dan nyaman! Saya pakai untuk ruang makan, dan tampilannya bikin suasana jadi hangat dan elegan.</p>
+            </div>
+
+            <div class="review-item">
+            <p><strong>Sri Wahyuni</strong> ⭐⭐⭐⭐☆</p>
+            <p>Bahan kayunya asli dan finishing-nya rapi. Saya suka karena bisa request warna sesuai interior rumah.</p>
+            </div>
+
+            <div class="review-item">
+            <p><strong>Kevin</strong> ⭐⭐⭐⭐⭐</p>
+            <p>Pesan untuk café saya — hasilnya sangat memuaskan. Kursi tampil natural tapi tetap modern. Banyak pelanggan memuji juga!</p>
+            </div>
+
+            <div class="review-item">
+            <p><strong>Nurhalimah</strong> ⭐⭐⭐⭐☆</p>
+            <p>Sudah hampir setahun pakai, masih awet dan kuat. Dudukannya nyaman meski lama. Recommended untuk yang cari kualitas bagus.</p>
+            </div>
+
+
+
+          <!-- Form Tambah Ulasan -->
+          <div id="user-reviews"></div>
+          <div class="add-review">
+            <h4>Tambah Ulasan Anda</h4>
+            <form id="review-form">
+              <label for="review-name">Nama:</label><br />
+              <input type="text" id="review-name" placeholder="Nama Anda" required /><br />
+
+              <label for="review-rating">Rating:</label><br />
+              <select id="review-rating" required>
+                <option value="">Pilih Rating</option>
+                <option value="5">⭐⭐⭐⭐⭐ - Sangat puas</option>
+                <option value="4">⭐⭐⭐⭐ - Puas</option>
+                <option value="3">⭐⭐⭐ - Cukup</option>
+                <option value="2">⭐⭐ - Kurang</option>
+                <option value="1">⭐ - Tidak suka</option>
+              </select><br />
+
+              <label for="review-message">Ulasan:</label><br />
+              <textarea id="review-message" placeholder="Tulis ulasan Anda..." required></textarea><br />
+
+              <button type="submit">Kirim</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Konten Tab: Pengiriman -->
+        <div class="tab-content" id="shipping" style="display: none;">
+          <div class="gofood-delivery">
+            <div class="delivery-header">
+                <div>
+                  <h4>Pengiriman Area Malang</h4>
+                  <small>Dikirim dari Malang Kota • Aman & cepat</small>
+                </div>
+            </div>
+
+            <div class="delivery-info">
+                <div class="delivery-box">
+                <span class="label">Estimasi Sampai</span>
+                <strong id="gofood-estimasi">-</strong>
+                </div>
+                <div class="delivery-box">
+                <span class="label">Ongkos Kirim</span>
+                <strong id="gofood-ongkir">-</strong>
+                </div>
+            </div>
+
+            <div class="location-select">
+                <label for="lokasi-gofood">📍 Pilih Lokasi Anda:</label>
+                <select id="lokasi-gofood">
+                <option value="">-- Pilih Lokasi --</option>
+                <option value="kota">Kota Malang</option>
+                <option value="kabupaten">Kabupaten Malang</option>
+                </select>
+            </div>
+
+            <div class="alamat-tambahan">
+              <label for="alamat-tambahan">📦 Alamat Lengkap Anda:</label>
+              <textarea id="alamat-tambahan" placeholder="Contoh: Jl. Soekarno Hatta Gg. 4 No. 10 RT 02 RW 01" rows="3"></textarea>
+            </div>
+        </div>
+        </div>
+    </div>
+  </section>
+
+    <!-- TOMBOL PESAN -->
+    <p id="openOrderForm" style="
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 2 rem;
+        color: white;
+        background-color: orange;
+        display: inline-block;
+        padding: 26px 46px;
+        border-radius: 6px;
+        margin: 20px auto;
+        transition: background-color 0.3s;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    ">Pesan</p>
+
+    <!-- POPUP FORM PEMESANAN -->
+        <div id="orderPopup" class="popup-overlay" style="display: none;" role="dialog" aria-modal="true">
+                <div class="popup-content">
+                    <h3>Pesan Sekarang - Multiple Item</h3>
+                    
+                    <button class="add-item-btn" onclick="addNewItem()">+ Tambah Item Baru</button>
+                    
+                    <div id="itemsContainer">
+                        <!-- Items will be added here dynamically -->
+                    </div>
+
+                    <div class="order-summary">
+                        <h4>Ringkasan Pesanan</h4>
+                        <div id="summaryContent">
+                            <div class="summary-item">
+                                <span>Belum ada item</span>
+                                <span>IDR 0</span>
+                            </div>
+                        </div>
+                        <div class="summary-total">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Total Keseluruhan:</span>
+                                <span id="grandTotal">IDR 0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="popup-buttons">
+                        <button type="button" onclick="checkout()">Pesan Sekarang</button>
+                        <button type="button" onclick="closeOrderForm()">Batal</button>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Confirmation Popup -->
+    <div id="confirmationPopup" class="popup-overlay" style="display: none;" role="dialog" aria-modal="true">
+        <div class="confirmation-popup">
+            <h3>Konfirmasi Pesanan</h3>
+            <div id="confirmationContent"></div>
+            <div class="popup-buttons">
+                <button type="button" onclick="confirmOrder()">Ya, Pesan</button>
+                <button type="button" onclick="closeConfirmation()">Batal</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <div class="fab-container">
+        <div class="fab-menu" id="fabMenu">
+            <div class="menufab">
+                <a href="https://wa.me/6281230110217" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 1 - Bu Emiliah</p>
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6281252548695" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 2 - Bu Rika</p> 
+                </a>
+            </div>
+    
+            <div class="menufab">
+                <a href="https://wa.me/6282331257449" target="_blank" class="fab-item">
+                    <img src="Foto/icon/whatsapp hijau.png" alt="WA" class="fab-logo">
+                    <p>Admin 3 - Bu Indrayani</p>
+                </a>
+            </div>
+            
+
+            <div class="menufab">
+                <button class="fab-item" id="openMap">
+                    <img src="Foto/icon/maps.png" alt="Map" class="fab-logo">
+                    <p>Map</p>
+                </button>
+            </div>
+            
+            <!-- Modal untuk Google Maps -->
+            <div id="mapContainer" class="map-overlay">
+                <div class="map-content">
+                    <iframe 
+                        id="mapFrame"
+                        src=""
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <button class="close-map" id="closeMap">✖</button>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="fab-button" onclick="toggleMenu()">
+            <img src="Foto/icon/whatsapp.png" alt="WhatsApp" class="fab-icon">
+        </div>
+    </div>
+
+    
+    
+    <!-- KONFIRMASI PESANAN -->
+    <div id="popup" class="popup-overlay" style="display:none;" role="dialog" aria-modal="true">
+      <div class="popup-content">
+        <h3>Konfirmasi Pesanan</h3>
+        <p id="popupText"></p>
+        <div class="popup-buttons">
+          <button type="button" onclick="confirmOrder()">Pesan</button>
+          <button type="button" onclick="closePopup()">Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <noscript><p style="color:red;">Mohon aktifkan JavaScript untuk menggunakan fitur pemesanan.</p></noscript>
+  </main>
+
+  <!-- SCRIPT -->
+  <script src="fabmap.js"></script>
+  <script>
+const hargaMenu = {
+  "Bangku Kayu Ukuran 30x30cm": 200000,
+  "Bangku Kursi Makan": 300000,
+  "Kursi ayaman": 550000,
+};
+
+
+const estimasiMap = {
+    kota: "1 hari",
+    kabupaten: "1 hari"
+  };
+
+  const ongkirMap = {
+    kota: 13000,
+    kabupaten: 30000
+  };
+
+  let itemCounter = 0;
+  let orderItems = [];
+  let selectedLokasi = ''; // Untuk menyimpan lokasi pengiriman saat ini
+
+  // === Estimasi & Ongkir ===
+  document.getElementById('lokasi-gofood').addEventListener('change', function () {
+    const val = this.value;
+    selectedLokasi = val;
+    document.getElementById('gofood-estimasi').textContent = estimasiMap[val] || "-";
+    document.getElementById('gofood-ongkir').textContent = val ? "Rp " + ongkirMap[val].toLocaleString('id-ID') : "-";
+    updateOrderSummary(); // Update total keseluruhan saat lokasi berubah
+  });
+
+  function addNewItem() {
+    itemCounter++;
+    const itemId = `item-${itemCounter}`;
+    const itemHtml = `
+      <div class="item-row" id="${itemId}">
+        <button class="remove-item" onclick="removeItem('${itemId}')" title="Hapus item">×</button>
+        <div class="form-group">
+          <label>Pilih Menu:</label>
+          <select onchange="updateItemPrice('${itemId}')">
+             <option value="Bangku Kayu Ukuran 30x30cm">Bangku Kayu Ukuran 30x30cm - IDR 200,000</option>
+            <option value="Bangku Kursi Makan">Bangku Kursi Makan - IDR 300,000</option>
+            <option value="Kursi ayaman">Kursi ayaman - IDR 550,000</option>
+          </select>
+        </div>
+        <div class="item-controls">
+          <div class="form-group" style="flex: 1;">
+            <label>Harga Satuan:</label>
+            <input type="text" class="price-input" value="IDR 200.000" readonly />
+          </div>
+          <div class="form-group" style="flex: 1;">
+            <label>Jumlah:</label>
+            <div class="quantity-controls">
+              <button class="quantity-btn" onclick="changeQuantity('${itemId}', -1)">-</button>
+              <input type="number" class="quantity-input" value="1" min="1" onchange="updateItemTotal('${itemId}')">
+              <button class="quantity-btn" onclick="changeQuantity('${itemId}', 1)">+</button>
+            </div>
+          </div>
+          <div class="form-group" style="flex: 1;">
+            <label>Subtotal:</label>
+            <input type="text" class="total-input" value="IDR 200.000" readonly />
+          </div>
+        </div>
+      </div>
+    `;
+    document.getElementById('itemsContainer').insertAdjacentHTML('beforeend', itemHtml);
+    updateOrderSummary();
+  }
+function removeItem(itemId) {
+    const itemElement = document.getElementById(itemId);
+    if (itemElement) {
+      itemElement.remove();
+      updateOrderSummary();
+    }
+  }
+
+  function updateItemPrice(itemId) {
+    const itemElement = document.getElementById(itemId);
+    const select = itemElement.querySelector('select');
+    const priceInput = itemElement.querySelector('.price-input');
+    const selectedMenu = select.value;
+    const price = hargaMenu[selectedMenu];
+    priceInput.value = `IDR ${price.toLocaleString('id-ID')}`;
+    updateItemTotal(itemId);
+  }
+
+  function changeQuantity(itemId, change) {
+    const itemElement = document.getElementById(itemId);
+    const quantityInput = itemElement.querySelector('.quantity-input');
+    let currentQuantity = parseInt(quantityInput.value) || 1;
+    let newQuantity = currentQuantity + change;
+    if (newQuantity < 1) newQuantity = 1;
+    quantityInput.value = newQuantity;
+    updateItemTotal(itemId);
+  }
+
+  function updateItemTotal(itemId) {
+    const itemElement = document.getElementById(itemId);
+    const select = itemElement.querySelector('select');
+    const quantityInput = itemElement.querySelector('.quantity-input');
+    const totalInput = itemElement.querySelector('.total-input');
+    const selectedMenu = select.value;
+    const price = hargaMenu[selectedMenu];
+    const quantity = parseInt(quantityInput.value) || 1;
+    const total = price * quantity;
+    totalInput.value = `IDR ${total.toLocaleString('id-ID')}`;
+    updateOrderSummary();
+  }
+
+  function updateOrderSummary() {
+    const items = document.querySelectorAll('.item-row');
+    const summaryContent = document.getElementById('summaryContent');
+    const grandTotalElement = document.getElementById('grandTotal');
+    let grandTotal = 0;
+    let summaryHtml = '';
+
+    if (items.length === 0) {
+      summaryHtml = '<div class="summary-item"><span>Belum ada item</span><span>IDR 0</span></div>';
+    } else {
+      items.forEach(item => {
+        const select = item.querySelector('select');
+        const quantityInput = item.querySelector('.quantity-input');
+        const selectedMenu = select.value;
+        const quantity = parseInt(quantityInput.value) || 1;
+        const price = hargaMenu[selectedMenu];
+        const subtotal = price * quantity;
+        grandTotal += subtotal;
+        summaryHtml += `
+          <div class="summary-item">
+            <span>${selectedMenu} x${quantity}</span>
+            <span>IDR ${subtotal.toLocaleString('id-ID')}</span>
+          </div>
+        `;
+      });
+    }
+
+    // Tambahkan ongkir jika lokasi dipilih
+    const ongkir = ongkirMap[selectedLokasi] || 0;
+    if (ongkir > 0) {
+      summaryHtml += `
+        <div class="summary-item">
+          <span>Ongkir (${selectedLokasi})</span>
+          <span>IDR ${ongkir.toLocaleString('id-ID')}</span>
+        </div>
+      `;
+    }
+
+    const totalAkhir = grandTotal + ongkir;
+
+    summaryContent.innerHTML = summaryHtml;
+    grandTotalElement.textContent = `IDR ${totalAkhir.toLocaleString('id-ID')}`;
+  }
+
+  function checkout() {
+    const items = document.querySelectorAll('.item-row');
+    if (items.length === 0) {
+      alert('Tambahkan minimal 1 item untuk melanjutkan pemesanan.');
+      return;
+    }
+
+    orderItems = [];
+    let grandTotal = 0;
+
+    items.forEach(item => {
+      const select = item.querySelector('select');
+      const quantityInput = item.querySelector('.quantity-input');
+      const selectedMenu = select.value;
+      const quantity = parseInt(quantityInput.value) || 1;
+      const price = hargaMenu[selectedMenu];
+      const subtotal = price * quantity;
+
+      orderItems.push({
+        menu: selectedMenu,
+        quantity: quantity,
+        price: price,
+        subtotal: subtotal
+      });
+
+      grandTotal += subtotal;
+    });
+
+    // Tambahkan ongkir
+    const ongkir = ongkirMap[selectedLokasi] || 0;
+    grandTotal += ongkir;
+
+    let confirmationHtml = '<div class="order-details"><h4>Detail Pesanan:</h4>';
+    orderItems.forEach(item => {
+      confirmationHtml += `
+        <p><strong>${item.menu}</strong><br>
+        Jumlah: ${item.quantity} pcs @ IDR ${item.price.toLocaleString('id-ID')}<br>
+        Subtotal: IDR ${item.subtotal.toLocaleString('id-ID')}</p>
+      `;
+    });
+
+    confirmationHtml += `<p><strong>Ongkir (${selectedLokasi}):</strong> IDR ${ongkir.toLocaleString('id-ID')}</p>`;
+    confirmationHtml += `<hr><p><strong>Total Keseluruhan: IDR ${grandTotal.toLocaleString('id-ID')}</strong></p></div>`;
+
+    document.getElementById('confirmationContent').innerHTML = confirmationHtml;
+    document.getElementById('confirmationPopup').style.display = 'flex';
+  }
+
+function confirmOrder() {
+  if (orderItems.length === 0) {
+    alert('Tidak ada pesanan untuk dikonfirmasi.');
+    return;
+  }
+
+  const alamatDetail = document.getElementById('alamat-tambahan').value.trim();
+  if (!alamatDetail) {
+    alert('Silakan isi alamat lengkap terlebih dahulu.');
+    return;
+  }
+
+  const ongkir = ongkirMap[selectedLokasi] || 0;
+  const orderData = {
+    items: orderItems,
+    lokasi: selectedLokasi,
+    ongkir: ongkir,
+    total: orderItems.reduce((sum, item) => sum + item.subtotal, 0) + ongkir
+  };
+
+  // Simpan alamat ke sessionStorage agar bisa digunakan di checkout.html
+  sessionStorage.setItem('lokasi', selectedLokasi);
+  sessionStorage.setItem('alamatDetail', alamatDetail);
+
+  const params = new URLSearchParams({
+    orderData: JSON.stringify(orderData)
+  });
+
+  window.location.href = `checkout.html?${params.toString()}`;
+}
+
+  function closeConfirmation() {
+    document.getElementById('confirmationPopup').style.display = 'none';
+  }
+
+  function closeOrderForm() {
+    document.getElementById('orderPopup').style.display = 'none';
+    document.getElementById('itemsContainer').innerHTML = '';
+    itemCounter = 0;
+    orderItems = [];
+    updateOrderSummary();
+  }
+
+  document.getElementById("openOrderForm").onclick = function () {
+    document.getElementById("orderPopup").style.display = "flex";
+    if (document.querySelectorAll('.item-row').length === 0) {
+      addNewItem();
+    }
+  };
+</script>
+
+  <script src="NK bebek.js"></script>
+  <script src="tab-ulasan.js"></script>
+<script src="fabmenu.js"></script>
+
+
+
+</body>
+</html>
