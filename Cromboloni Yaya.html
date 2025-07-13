@@ -528,7 +528,7 @@ function removeItem(itemId) {
     document.getElementById('confirmationPopup').style.display = 'flex';
   }
 
-function confirmOrder() {
+  function confirmOrder() {
   if (orderItems.length === 0) {
     alert('Tidak ada pesanan untuk dikonfirmasi.');
     return;
@@ -553,8 +553,10 @@ function confirmOrder() {
   sessionStorage.setItem('alamatDetail', alamatDetail);
 
   const params = new URLSearchParams({
-    orderData: JSON.stringify(orderData)
-  });
+  orderData: JSON.stringify(orderData),
+  alamat: alamatDetail
+});
+
 
   window.location.href = `checkout.html?${params.toString()}`;
 }

@@ -496,25 +496,37 @@
   }
 
   function confirmOrder() {
-    if (orderItems.length === 0) {
-      alert('Tidak ada pesanan untuk dikonfirmasi.');
-      return;
-    }
-
-    const ongkir = ongkirMap[selectedLokasi] || 0;
-    const orderData = {
-      items: orderItems,
-      lokasi: selectedLokasi,
-      ongkir: ongkir,
-      total: orderItems.reduce((sum, item) => sum + item.subtotal, 0) + ongkir
-    };
-
-    const params = new URLSearchParams({
-      orderData: JSON.stringify(orderData)
-    });
-
-    window.location.href = `checkout.html?${params.toString()}`;
+  if (orderItems.length === 0) {
+    alert('Tidak ada pesanan untuk dikonfirmasi.');
+    return;
   }
+
+  const alamatDetail = document.getElementById('alamat-tambahan').value.trim();
+  if (!alamatDetail) {
+    alert('Silakan isi alamat lengkap terlebih dahulu.');
+    return;
+  }
+
+  const ongkir = ongkirMap[selectedLokasi] || 0;
+  const orderData = {
+    items: orderItems,
+    lokasi: selectedLokasi,
+    ongkir: ongkir,
+    total: orderItems.reduce((sum, item) => sum + item.subtotal, 0) + ongkir
+  };
+
+  // Simpan alamat ke sessionStorage agar bisa digunakan di checkout.html
+  sessionStorage.setItem('lokasi', selectedLokasi);
+  sessionStorage.setItem('alamatDetail', alamatDetail);
+
+  const params = new URLSearchParams({
+  orderData: JSON.stringify(orderData),
+  alamat: alamatDetail
+});
+
+
+  window.location.href = `checkout.html?${params.toString()}`;
+}
 
   function closeConfirmation() {
     document.getElementById('confirmationPopup').style.display = 'none';

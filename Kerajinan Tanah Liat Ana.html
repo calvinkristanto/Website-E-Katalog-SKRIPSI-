@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kerajinan Tanah Liat Ana</title>
   <link rel="icon" href="Foto/icon/icon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="allformakanan.css" />
+  <link rel="stylesheet" href="allforkerajinan.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -542,8 +542,10 @@ function confirmOrder() {
   sessionStorage.setItem('alamatDetail', alamatDetail);
 
   const params = new URLSearchParams({
-    orderData: JSON.stringify(orderData)
-  });
+  orderData: JSON.stringify(orderData),
+  alamat: alamatDetail
+});
+
 
   window.location.href = `checkout.html?${params.toString()}`;
 }

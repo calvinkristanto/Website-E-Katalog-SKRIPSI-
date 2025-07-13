@@ -320,165 +320,118 @@
   "Kue Sus Buah": 4000,
 };
 
+const estimasiMap = {
+  kota: "1 hari",
+  kabupaten: "1 hari"
+};
 
-  const estimasiMap = {
-    kota: "1 hari",
-    kabupaten: "1 hari"
-  };
+const ongkirMap = {
+  kota: 13000,
+  kabupaten: 30000
+};
 
-  const ongkirMap = {
-    kota: 13000,
-    kabupaten: 30000
-  };
+let itemCounter = 0;
+let orderItems = [];
+let selectedLokasi = '';
 
-  let itemCounter = 0;
-  let orderItems = [];
-  let selectedLokasi = ''; // Untuk menyimpan lokasi pengiriman saat ini
+document.getElementById('lokasi-gofood').addEventListener('change', function () {
+  const val = this.value;
+  selectedLokasi = val;
+  document.getElementById('gofood-estimasi').textContent = estimasiMap[val] || "-";
+  document.getElementById('gofood-ongkir').textContent = val ? "Rp " + ongkirMap[val].toLocaleString('id-ID') : "-";
+  updateOrderSummary();
+});
 
-  // === Estimasi & Ongkir ===
-  document.getElementById('lokasi-gofood').addEventListener('change', function () {
-    const val = this.value;
-    selectedLokasi = val;
-    document.getElementById('gofood-estimasi').textContent = estimasiMap[val] || "-";
-    document.getElementById('gofood-ongkir').textContent = val ? "Rp " + ongkirMap[val].toLocaleString('id-ID') : "-";
-    updateOrderSummary(); // Update total keseluruhan saat lokasi berubah
-  });
-
-  function addNewItem() {
-    itemCounter++;
-    const itemId = `item-${itemCounter}`;
-    const itemHtml = `
-      <div class="item-row" id="${itemId}">
-        <button class="remove-item" onclick="removeItem('${itemId}')" title="Hapus item">×</button>
+function addNewItem() {
+  itemCounter++;
+  const itemId = `item-${itemCounter}`;
+  const itemHtml = `
+    <div class="item-row" id="${itemId}">
+      <button class="remove-item" onclick="removeItem('${itemId}')" title="Hapus item">×</button>
+      <div class="form-group">
+        <label>Pilih Menu:</label>
+        <select onchange="updateItemPrice('${itemId}')">
+          <option value="Cromboloni">Cromboloni - IDR 15,000</option>
+          <option value="Kue Lumpur">Kue Lumpur - IDR 6,000</option>
+          <option value="Kue Kastengel">Kue Kastengel - IDR 25,000</option>
+          <option value="Kue Sus Buah">Kue Sus Buah - IDR 4,000</option>
+        </select>
+      </div>
+      <div class="item-controls">
         <div class="form-group">
-          <label>Pilih Menu:</label>
-          <select onchange="updateItemPrice('${itemId}')">
-            <option value="Cromboloni">Cromboloni - IDR 15,000</option>
-            <option value="Kue Lumpur">Kue Lumpur - IDR 6,000</option>
-            <option value="Kue Kastengel">Kue Kastengel - IDR 25,000</option>
-            <option value="Kue Sus Buah">Kue Sus Buah - IDR 4,000</option>
-
-          </select>
+          <label>Harga Satuan:</label>
+          <input type="text" class="price-input" value="IDR 15.000" readonly />
         </div>
-        <div class="item-controls">
-          <div class="form-group" style="flex: 1;">
-            <label>Harga Satuan:</label>
-            <input type="text" class="price-input" value="IDR 15.000" readonly />
+        <div class="form-group">
+          <label>Jumlah:</label>
+          <div class="quantity-controls">
+            <button onclick="changeQuantity('${itemId}', -1)">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" onchange="updateItemTotal('${itemId}')">
+            <button onclick="changeQuantity('${itemId}', 1)">+</button>
           </div>
-          <div class="form-group" style="flex: 1;">
-            <label>Jumlah:</label>
-            <div class="quantity-controls">
-              <button class="quantity-btn" onclick="changeQuantity('${itemId}', -1)">-</button>
-              <input type="number" class="quantity-input" value="1" min="1" onchange="updateItemTotal('${itemId}')">
-              <button class="quantity-btn" onclick="changeQuantity('${itemId}', 1)">+</button>
-            </div>
-          </div>
-          <div class="form-group" style="flex: 1;">
-            <label>Subtotal:</label>
-            <input type="text" class="total-input" value="IDR 15.000" readonly />
-          </div>
+        </div>
+        <div class="form-group">
+          <label>Subtotal:</label>
+          <input type="text" class="total-input" value="IDR 15.000" readonly />
         </div>
       </div>
-    `;
-    document.getElementById('itemsContainer').insertAdjacentHTML('beforeend', itemHtml);
+    </div>
+  `;
+  document.getElementById('itemsContainer').insertAdjacentHTML('beforeend', itemHtml);
+  updateOrderSummary();
+}
+
+function removeItem(itemId) {
+  const itemElement = document.getElementById(itemId);
+  if (itemElement) {
+    itemElement.remove();
     updateOrderSummary();
   }
+}
 
-  function removeItem(itemId) {
-    const itemElement = document.getElementById(itemId);
-    if (itemElement) {
-      itemElement.remove();
-      updateOrderSummary();
-    }
-  }
+function updateItemPrice(itemId) {
+  const itemElement = document.getElementById(itemId);
+  const select = itemElement.querySelector('select');
+  const priceInput = itemElement.querySelector('.price-input');
+  const selectedMenu = select.value;
+  const price = hargaMenu[selectedMenu];
+  priceInput.value = `IDR ${price.toLocaleString('id-ID')}`;
+  updateItemTotal(itemId);
+}
 
-  function updateItemPrice(itemId) {
-    const itemElement = document.getElementById(itemId);
-    const select = itemElement.querySelector('select');
-    const priceInput = itemElement.querySelector('.price-input');
-    const selectedMenu = select.value;
-    const price = hargaMenu[selectedMenu];
-    priceInput.value = `IDR ${price.toLocaleString('id-ID')}`;
-    updateItemTotal(itemId);
-  }
+function changeQuantity(itemId, change) {
+  const itemElement = document.getElementById(itemId);
+  const quantityInput = itemElement.querySelector('.quantity-input');
+  let currentQuantity = parseInt(quantityInput.value) || 1;
+  let newQuantity = currentQuantity + change;
+  if (newQuantity < 1) newQuantity = 1;
+  quantityInput.value = newQuantity;
+  updateItemTotal(itemId);
+}
 
-  function changeQuantity(itemId, change) {
-    const itemElement = document.getElementById(itemId);
-    const quantityInput = itemElement.querySelector('.quantity-input');
-    let currentQuantity = parseInt(quantityInput.value) || 1;
-    let newQuantity = currentQuantity + change;
-    if (newQuantity < 1) newQuantity = 1;
-    quantityInput.value = newQuantity;
-    updateItemTotal(itemId);
-  }
+function updateItemTotal(itemId) {
+  const itemElement = document.getElementById(itemId);
+  const select = itemElement.querySelector('select');
+  const quantityInput = itemElement.querySelector('.quantity-input');
+  const totalInput = itemElement.querySelector('.total-input');
+  const selectedMenu = select.value;
+  const price = hargaMenu[selectedMenu];
+  const quantity = parseInt(quantityInput.value) || 1;
+  const total = price * quantity;
+  totalInput.value = `IDR ${total.toLocaleString('id-ID')}`;
+  updateOrderSummary();
+}
 
-  function updateItemTotal(itemId) {
-    const itemElement = document.getElementById(itemId);
-    const select = itemElement.querySelector('select');
-    const quantityInput = itemElement.querySelector('.quantity-input');
-    const totalInput = itemElement.querySelector('.total-input');
-    const selectedMenu = select.value;
-    const price = hargaMenu[selectedMenu];
-    const quantity = parseInt(quantityInput.value) || 1;
-    const total = price * quantity;
-    totalInput.value = `IDR ${total.toLocaleString('id-ID')}`;
-    updateOrderSummary();
-  }
+function updateOrderSummary() {
+  const items = document.querySelectorAll('.item-row');
+  const summaryContent = document.getElementById('summaryContent');
+  const grandTotalElement = document.getElementById('grandTotal');
+  let grandTotal = 0;
+  let summaryHtml = '';
 
-  function updateOrderSummary() {
-    const items = document.querySelectorAll('.item-row');
-    const summaryContent = document.getElementById('summaryContent');
-    const grandTotalElement = document.getElementById('grandTotal');
-    let grandTotal = 0;
-    let summaryHtml = '';
-
-    if (items.length === 0) {
-      summaryHtml = '<div class="summary-item"><span>Belum ada item</span><span>IDR 0</span></div>';
-    } else {
-      items.forEach(item => {
-        const select = item.querySelector('select');
-        const quantityInput = item.querySelector('.quantity-input');
-        const selectedMenu = select.value;
-        const quantity = parseInt(quantityInput.value) || 1;
-        const price = hargaMenu[selectedMenu];
-        const subtotal = price * quantity;
-        grandTotal += subtotal;
-        summaryHtml += `
-          <div class="summary-item">
-            <span>${selectedMenu} x${quantity}</span>
-            <span>IDR ${subtotal.toLocaleString('id-ID')}</span>
-          </div>
-        `;
-      });
-    }
-
-    // Tambahkan ongkir jika lokasi dipilih
-    const ongkir = ongkirMap[selectedLokasi] || 0;
-    if (ongkir > 0) {
-      summaryHtml += `
-        <div class="summary-item">
-          <span>Ongkir (${selectedLokasi})</span>
-          <span>IDR ${ongkir.toLocaleString('id-ID')}</span>
-        </div>
-      `;
-    }
-
-    const totalAkhir = grandTotal + ongkir;
-
-    summaryContent.innerHTML = summaryHtml;
-    grandTotalElement.textContent = `IDR ${totalAkhir.toLocaleString('id-ID')}`;
-  }
-
-  function checkout() {
-    const items = document.querySelectorAll('.item-row');
-    if (items.length === 0) {
-      alert('Tambahkan minimal 1 item untuk melanjutkan pemesanan.');
-      return;
-    }
-
-    orderItems = [];
-    let grandTotal = 0;
-
+  if (items.length === 0) {
+    summaryHtml = '<div class="summary-item"><span>Belum ada item</span><span>IDR 0</span></div>';
+  } else {
     items.forEach(item => {
       const select = item.querySelector('select');
       const quantityInput = item.querySelector('.quantity-input');
@@ -486,57 +439,111 @@
       const quantity = parseInt(quantityInput.value) || 1;
       const price = hargaMenu[selectedMenu];
       const subtotal = price * quantity;
-
-      orderItems.push({
-        menu: selectedMenu,
-        quantity: quantity,
-        price: price,
-        subtotal: subtotal
-      });
-
       grandTotal += subtotal;
-    });
-
-    // Tambahkan ongkir
-    const ongkir = ongkirMap[selectedLokasi] || 0;
-    grandTotal += ongkir;
-
-    let confirmationHtml = '<div class="order-details"><h4>Detail Pesanan:</h4>';
-    orderItems.forEach(item => {
-      confirmationHtml += `
-        <p><strong>${item.menu}</strong><br>
-        Jumlah: ${item.quantity} pcs @ IDR ${item.price.toLocaleString('id-ID')}<br>
-        Subtotal: IDR ${item.subtotal.toLocaleString('id-ID')}</p>
+      summaryHtml += `
+        <div class="summary-item">
+          <span>${selectedMenu} x${quantity}</span>
+          <span>IDR ${subtotal.toLocaleString('id-ID')}</span>
+        </div>
       `;
     });
-
-    confirmationHtml += `<p><strong>Ongkir (${selectedLokasi}):</strong> IDR ${ongkir.toLocaleString('id-ID')}</p>`;
-    confirmationHtml += `<hr><p><strong>Total Keseluruhan: IDR ${grandTotal.toLocaleString('id-ID')}</strong></p></div>`;
-
-    document.getElementById('confirmationContent').innerHTML = confirmationHtml;
-    document.getElementById('confirmationPopup').style.display = 'flex';
   }
 
-  function confirmOrder() {
-    if (orderItems.length === 0) {
-      alert('Tidak ada pesanan untuk dikonfirmasi.');
-      return;
-    }
+  const ongkir = ongkirMap[selectedLokasi] || 0;
+  if (ongkir > 0) {
+    summaryHtml += `
+      <div class="summary-item">
+        <span>Ongkir (${selectedLokasi})</span>
+        <span>IDR ${ongkir.toLocaleString('id-ID')}</span>
+      </div>
+    `;
+  }
 
-    const ongkir = ongkirMap[selectedLokasi] || 0;
-    const orderData = {
-      items: orderItems,
-      lokasi: selectedLokasi,
-      ongkir: ongkir,
-      total: orderItems.reduce((sum, item) => sum + item.subtotal, 0) + ongkir
-    };
+  const totalAkhir = grandTotal + ongkir;
 
-    const params = new URLSearchParams({
-      orderData: JSON.stringify(orderData)
+  summaryContent.innerHTML = summaryHtml;
+  grandTotalElement.textContent = `IDR ${totalAkhir.toLocaleString('id-ID')}`;
+}
+
+function checkout() {
+  const items = document.querySelectorAll('.item-row');
+  if (items.length === 0) {
+    alert('Tambahkan minimal 1 item untuk melanjutkan pemesanan.');
+    return;
+  }
+
+  orderItems = [];
+  let grandTotal = 0;
+
+  items.forEach(item => {
+    const select = item.querySelector('select');
+    const quantityInput = item.querySelector('.quantity-input');
+    const selectedMenu = select.value;
+    const quantity = parseInt(quantityInput.value) || 1;
+    const price = hargaMenu[selectedMenu];
+    const subtotal = price * quantity;
+
+    orderItems.push({
+      menu: selectedMenu,
+      quantity: quantity,
+      price: price,
+      subtotal: subtotal
     });
 
-    window.location.href = `checkout.html?${params.toString()}`;
+    grandTotal += subtotal;
+  });
+
+  const ongkir = ongkirMap[selectedLokasi] || 0;
+  grandTotal += ongkir;
+
+  let confirmationHtml = '<div class="order-details"><h4>Detail Pesanan:</h4>';
+  orderItems.forEach(item => {
+    confirmationHtml += `
+      <p><strong>${item.menu}</strong><br>
+      Jumlah: ${item.quantity} pcs @ IDR ${item.price.toLocaleString('id-ID')}<br>
+      Subtotal: IDR ${item.subtotal.toLocaleString('id-ID')}</p>
+    `;
+  });
+
+  confirmationHtml += `<p><strong>Ongkir (${selectedLokasi}):</strong> IDR ${ongkir.toLocaleString('id-ID')}</p>`;
+  confirmationHtml += `<hr><p><strong>Total Keseluruhan: IDR ${grandTotal.toLocaleString('id-ID')}</strong></p></div>`;
+
+  document.getElementById('confirmationContent').innerHTML = confirmationHtml;
+  document.getElementById('confirmationPopup').style.display = 'flex';
+}
+
+function confirmOrder() {
+  if (orderItems.length === 0) {
+    alert('Tidak ada pesanan untuk dikonfirmasi.');
+    return;
   }
+
+  const alamatDetail = document.getElementById('alamat-tambahan').value.trim();
+  if (!alamatDetail) {
+    alert('Silakan isi alamat lengkap terlebih dahulu.');
+    return;
+  }
+
+  const ongkir = ongkirMap[selectedLokasi] || 0;
+  const orderData = {
+    items: orderItems,
+    lokasi: selectedLokasi,
+    ongkir: ongkir,
+    total: orderItems.reduce((sum, item) => sum + item.subtotal, 0) + ongkir
+  };
+
+  // Simpan alamat ke sessionStorage agar bisa digunakan di checkout.html
+  sessionStorage.setItem('lokasi', selectedLokasi);
+  sessionStorage.setItem('alamatDetail', alamatDetail);
+
+  const params = new URLSearchParams({
+  orderData: JSON.stringify(orderData),
+  alamat: alamatDetail
+});
+
+
+  window.location.href = `checkout.html?${params.toString()}`;
+}
 
   function closeConfirmation() {
     document.getElementById('confirmationPopup').style.display = 'none';

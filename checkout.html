@@ -315,9 +315,10 @@
   const orderData = getOrderDataFromURL();
   renderOrder(orderData);
 
-  const lokasi = sessionStorage.getItem('lokasi') || '-';
-  const alamatDetail = sessionStorage.getItem('alamatDetail') || '-';
-  document.getElementById('alamat-lengkap').textContent = `${lokasi}, ${alamatDetail}`;
+  const lokasiLabel = sessionStorage.getItem('lokasi') === 'kota' ? 'Kota Malang' : 'Kabupaten Malang';
+  const alamatDetail = sessionStorage.getItem('alamatDetail') || 'Alamat belum diisi';
+  document.getElementById('alamat-lengkap').textContent = `${alamatDetail} (${lokasiLabel})`;
+
 </script>
 
 </body>

@@ -554,8 +554,10 @@ function confirmOrder() {
   sessionStorage.setItem('alamatDetail', alamatDetail);
 
   const params = new URLSearchParams({
-    orderData: JSON.stringify(orderData)
-  });
+  orderData: JSON.stringify(orderData),
+  alamat: alamatDetail
+});
+
 
   window.location.href = `checkout.html?${params.toString()}`;
 }

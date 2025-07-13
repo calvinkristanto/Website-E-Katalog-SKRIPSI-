@@ -1,18 +1,15 @@
-document.getElementById("searchBox").addEventListener("input", function() {
-    let searchValue = this.value.toLowerCase();
-    let items = document.querySelectorAll(".item");
-    
-    if (searchValue === "") {
-        items.forEach(item => item.style.display = "block");
-        return;
-    }
-    
+
+document.getElementById("searchBox").addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const items = document.querySelectorAll(".item");
+
     items.forEach(item => {
-        let text = item.querySelector("h1").textContent.toLowerCase();
-        if (text.startsWith(searchValue)) {
+        const title = item.querySelector(".boxdes h1").textContent.toLowerCase();
+        if (title.includes(query)) {
             item.style.display = "block";
         } else {
             item.style.display = "none";
         }
     });
 });
+

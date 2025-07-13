@@ -552,12 +552,13 @@ const hargaMenu = {
   sessionStorage.setItem('alamatDetail', alamatDetail);
 
   const params = new URLSearchParams({
-    orderData: JSON.stringify(orderData)
-  });
+  orderData: JSON.stringify(orderData),
+  alamat: alamatDetail
+});
+
 
   window.location.href = `checkout.html?${params.toString()}`;
 }
-
 
   function closeConfirmation() {
     document.getElementById('confirmationPopup').style.display = 'none';
@@ -577,8 +578,6 @@ const hargaMenu = {
       addNewItem();
     }
   };
-
-
 </script>
 
   <script src="NK bebek.js"></script>

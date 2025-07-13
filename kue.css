@@ -313,6 +313,11 @@
     }
 }
 
+.menufab {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px; /* Tambahkan jarak antar tombol */
+}
 
 .fab-button {
     position: fixed;
