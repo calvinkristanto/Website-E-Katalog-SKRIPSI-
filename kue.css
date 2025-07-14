@@ -562,7 +562,7 @@
     border-radius: 50px;
     font-size: 16px;
     background: var(--white);
-    color: var(--bluelight);
+    color: var(--navy);
     font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
