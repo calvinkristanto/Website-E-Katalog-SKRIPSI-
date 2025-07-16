@@ -26,7 +26,7 @@
     <li><a href="#home" class="active">Beranda</a></li>
     <li><a href="#food">Makanan</a></li>
     <li><a href="#about">Tentang</a></li>
-    <li><a href="#contact">Kontak</a></li>
+    <li><a href="#contact">Kontak Kita</a></li>
   </ul>
 </header>
 
@@ -135,7 +135,6 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
   </div>
-</div>
   </div>
 </section>
 
@@ -342,28 +341,10 @@
   window.addEventListener('load', scrollAnimation);
 </script>
 
-<script>
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top <= window.innerHeight && rect.bottom >= 0;
-  }
-
-  function animateOnScroll() {
-    document.querySelectorAll('.fade-in').forEach(el => {
-      if (isInViewport(el)) {
-        el.classList.add('show');
-      } else {
-        el.classList.remove('show'); // kalau ingin animasi sekali saja, hapus baris ini
-      }
-    });
-  }
-
-  window.addEventListener('scroll', animateOnScroll);
-  window.addEventListener('load', animateOnScroll);
-</script>
 
 
 
+  <!-- Update garis bawah navbar -->
 <script>
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
@@ -400,7 +381,7 @@
   window.addEventListener("load", updateActiveLink);
 </script>
 
-
+  <!-- slider gallery -->
 <script>
   let slideIndex = 0;
   const slides = document.querySelectorAll('.slider .slide');
@@ -448,7 +429,7 @@
   });
 </script>
 
-  <script>
+<script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
