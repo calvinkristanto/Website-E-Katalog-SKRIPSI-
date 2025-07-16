@@ -362,21 +362,7 @@
   window.addEventListener('load', animateOnScroll);
 </script>
 
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      } else {
-        entry.target.classList.remove('show'); // Biar animasi bisa diulang
-      }
-    });
-  }, {
-    threshold: 0.1 // bisa disesuaikan
-  });
 
-  document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
-</script>
 
 <script>
   const menuToggle = document.getElementById("menu-toggle");
@@ -462,6 +448,21 @@
   });
 </script>
 
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
+</script>
 
 
 
